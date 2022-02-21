@@ -119,7 +119,7 @@ import struct
 
 
 class Retour_celluleResponse(genpy.Message):
-  _md5sum = "d28641961c36e4a329584c37028b3fa0"
+  _md5sum = "383fcdcd810369913b6bf461f1c04058"
   _type = "schneider/Retour_celluleResponse"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """bool ST1
@@ -179,10 +179,15 @@ bool CP1
 bool CP2
 bool CP9
 bool CP10
+bool OUTR1
+bool OUTR2
+bool OUTR3
+bool OUTR4
+bool INR1
 
 """
-  __slots__ = ['ST1','ST2','ST3','ST4','ST5','ST20','ST21','ST22','ST23','ST24','R1D','R2D','R11D','R12D','R1G','R2G','R11G','R12G','PI1','PI2','PI7','PI8','D1','D2','D11','D12','V1','V2','V11','V12','PS1','PS2','PS3','PS4','PS5','PS6','PS20','PS21','PS22','PS23','PS24','D1D','D2D','D11D','D12D','D1G','D2G','D11G','D12G','CPI1','CPI2','CPI7','CPI8','CP1','CP2','CP9','CP10']
-  _slot_types = ['bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool']
+  __slots__ = ['ST1','ST2','ST3','ST4','ST5','ST20','ST21','ST22','ST23','ST24','R1D','R2D','R11D','R12D','R1G','R2G','R11G','R12G','PI1','PI2','PI7','PI8','D1','D2','D11','D12','V1','V2','V11','V12','PS1','PS2','PS3','PS4','PS5','PS6','PS20','PS21','PS22','PS23','PS24','D1D','D2D','D11D','D12D','D1G','D2G','D11G','D12G','CPI1','CPI2','CPI7','CPI8','CP1','CP2','CP9','CP10','OUTR1','OUTR2','OUTR3','OUTR4','INR1']
+  _slot_types = ['bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool']
 
   def __init__(self, *args, **kwds):
     """
@@ -192,7 +197,7 @@ bool CP10
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       ST1,ST2,ST3,ST4,ST5,ST20,ST21,ST22,ST23,ST24,R1D,R2D,R11D,R12D,R1G,R2G,R11G,R12G,PI1,PI2,PI7,PI8,D1,D2,D11,D12,V1,V2,V11,V12,PS1,PS2,PS3,PS4,PS5,PS6,PS20,PS21,PS22,PS23,PS24,D1D,D2D,D11D,D12D,D1G,D2G,D11G,D12G,CPI1,CPI2,CPI7,CPI8,CP1,CP2,CP9,CP10
+       ST1,ST2,ST3,ST4,ST5,ST20,ST21,ST22,ST23,ST24,R1D,R2D,R11D,R12D,R1G,R2G,R11G,R12G,PI1,PI2,PI7,PI8,D1,D2,D11,D12,V1,V2,V11,V12,PS1,PS2,PS3,PS4,PS5,PS6,PS20,PS21,PS22,PS23,PS24,D1D,D2D,D11D,D12D,D1G,D2G,D11G,D12G,CPI1,CPI2,CPI7,CPI8,CP1,CP2,CP9,CP10,OUTR1,OUTR2,OUTR3,OUTR4,INR1
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -315,6 +320,16 @@ bool CP10
         self.CP9 = False
       if self.CP10 is None:
         self.CP10 = False
+      if self.OUTR1 is None:
+        self.OUTR1 = False
+      if self.OUTR2 is None:
+        self.OUTR2 = False
+      if self.OUTR3 is None:
+        self.OUTR3 = False
+      if self.OUTR4 is None:
+        self.OUTR4 = False
+      if self.INR1 is None:
+        self.INR1 = False
     else:
       self.ST1 = False
       self.ST2 = False
@@ -373,6 +388,11 @@ bool CP10
       self.CP2 = False
       self.CP9 = False
       self.CP10 = False
+      self.OUTR1 = False
+      self.OUTR2 = False
+      self.OUTR3 = False
+      self.OUTR4 = False
+      self.INR1 = False
 
   def _get_types(self):
     """
@@ -387,7 +407,7 @@ bool CP10
     """
     try:
       _x = self
-      buff.write(_get_struct_57B().pack(_x.ST1, _x.ST2, _x.ST3, _x.ST4, _x.ST5, _x.ST20, _x.ST21, _x.ST22, _x.ST23, _x.ST24, _x.R1D, _x.R2D, _x.R11D, _x.R12D, _x.R1G, _x.R2G, _x.R11G, _x.R12G, _x.PI1, _x.PI2, _x.PI7, _x.PI8, _x.D1, _x.D2, _x.D11, _x.D12, _x.V1, _x.V2, _x.V11, _x.V12, _x.PS1, _x.PS2, _x.PS3, _x.PS4, _x.PS5, _x.PS6, _x.PS20, _x.PS21, _x.PS22, _x.PS23, _x.PS24, _x.D1D, _x.D2D, _x.D11D, _x.D12D, _x.D1G, _x.D2G, _x.D11G, _x.D12G, _x.CPI1, _x.CPI2, _x.CPI7, _x.CPI8, _x.CP1, _x.CP2, _x.CP9, _x.CP10))
+      buff.write(_get_struct_62B().pack(_x.ST1, _x.ST2, _x.ST3, _x.ST4, _x.ST5, _x.ST20, _x.ST21, _x.ST22, _x.ST23, _x.ST24, _x.R1D, _x.R2D, _x.R11D, _x.R12D, _x.R1G, _x.R2G, _x.R11G, _x.R12G, _x.PI1, _x.PI2, _x.PI7, _x.PI8, _x.D1, _x.D2, _x.D11, _x.D12, _x.V1, _x.V2, _x.V11, _x.V12, _x.PS1, _x.PS2, _x.PS3, _x.PS4, _x.PS5, _x.PS6, _x.PS20, _x.PS21, _x.PS22, _x.PS23, _x.PS24, _x.D1D, _x.D2D, _x.D11D, _x.D12D, _x.D1G, _x.D2G, _x.D11G, _x.D12G, _x.CPI1, _x.CPI2, _x.CPI7, _x.CPI8, _x.CP1, _x.CP2, _x.CP9, _x.CP10, _x.OUTR1, _x.OUTR2, _x.OUTR3, _x.OUTR4, _x.INR1))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -401,8 +421,8 @@ bool CP10
       end = 0
       _x = self
       start = end
-      end += 57
-      (_x.ST1, _x.ST2, _x.ST3, _x.ST4, _x.ST5, _x.ST20, _x.ST21, _x.ST22, _x.ST23, _x.ST24, _x.R1D, _x.R2D, _x.R11D, _x.R12D, _x.R1G, _x.R2G, _x.R11G, _x.R12G, _x.PI1, _x.PI2, _x.PI7, _x.PI8, _x.D1, _x.D2, _x.D11, _x.D12, _x.V1, _x.V2, _x.V11, _x.V12, _x.PS1, _x.PS2, _x.PS3, _x.PS4, _x.PS5, _x.PS6, _x.PS20, _x.PS21, _x.PS22, _x.PS23, _x.PS24, _x.D1D, _x.D2D, _x.D11D, _x.D12D, _x.D1G, _x.D2G, _x.D11G, _x.D12G, _x.CPI1, _x.CPI2, _x.CPI7, _x.CPI8, _x.CP1, _x.CP2, _x.CP9, _x.CP10,) = _get_struct_57B().unpack(str[start:end])
+      end += 62
+      (_x.ST1, _x.ST2, _x.ST3, _x.ST4, _x.ST5, _x.ST20, _x.ST21, _x.ST22, _x.ST23, _x.ST24, _x.R1D, _x.R2D, _x.R11D, _x.R12D, _x.R1G, _x.R2G, _x.R11G, _x.R12G, _x.PI1, _x.PI2, _x.PI7, _x.PI8, _x.D1, _x.D2, _x.D11, _x.D12, _x.V1, _x.V2, _x.V11, _x.V12, _x.PS1, _x.PS2, _x.PS3, _x.PS4, _x.PS5, _x.PS6, _x.PS20, _x.PS21, _x.PS22, _x.PS23, _x.PS24, _x.D1D, _x.D2D, _x.D11D, _x.D12D, _x.D1G, _x.D2G, _x.D11G, _x.D12G, _x.CPI1, _x.CPI2, _x.CPI7, _x.CPI8, _x.CP1, _x.CP2, _x.CP9, _x.CP10, _x.OUTR1, _x.OUTR2, _x.OUTR3, _x.OUTR4, _x.INR1,) = _get_struct_62B().unpack(str[start:end])
       self.ST1 = bool(self.ST1)
       self.ST2 = bool(self.ST2)
       self.ST3 = bool(self.ST3)
@@ -460,6 +480,11 @@ bool CP10
       self.CP2 = bool(self.CP2)
       self.CP9 = bool(self.CP9)
       self.CP10 = bool(self.CP10)
+      self.OUTR1 = bool(self.OUTR1)
+      self.OUTR2 = bool(self.OUTR2)
+      self.OUTR3 = bool(self.OUTR3)
+      self.OUTR4 = bool(self.OUTR4)
+      self.INR1 = bool(self.INR1)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -473,7 +498,7 @@ bool CP10
     """
     try:
       _x = self
-      buff.write(_get_struct_57B().pack(_x.ST1, _x.ST2, _x.ST3, _x.ST4, _x.ST5, _x.ST20, _x.ST21, _x.ST22, _x.ST23, _x.ST24, _x.R1D, _x.R2D, _x.R11D, _x.R12D, _x.R1G, _x.R2G, _x.R11G, _x.R12G, _x.PI1, _x.PI2, _x.PI7, _x.PI8, _x.D1, _x.D2, _x.D11, _x.D12, _x.V1, _x.V2, _x.V11, _x.V12, _x.PS1, _x.PS2, _x.PS3, _x.PS4, _x.PS5, _x.PS6, _x.PS20, _x.PS21, _x.PS22, _x.PS23, _x.PS24, _x.D1D, _x.D2D, _x.D11D, _x.D12D, _x.D1G, _x.D2G, _x.D11G, _x.D12G, _x.CPI1, _x.CPI2, _x.CPI7, _x.CPI8, _x.CP1, _x.CP2, _x.CP9, _x.CP10))
+      buff.write(_get_struct_62B().pack(_x.ST1, _x.ST2, _x.ST3, _x.ST4, _x.ST5, _x.ST20, _x.ST21, _x.ST22, _x.ST23, _x.ST24, _x.R1D, _x.R2D, _x.R11D, _x.R12D, _x.R1G, _x.R2G, _x.R11G, _x.R12G, _x.PI1, _x.PI2, _x.PI7, _x.PI8, _x.D1, _x.D2, _x.D11, _x.D12, _x.V1, _x.V2, _x.V11, _x.V12, _x.PS1, _x.PS2, _x.PS3, _x.PS4, _x.PS5, _x.PS6, _x.PS20, _x.PS21, _x.PS22, _x.PS23, _x.PS24, _x.D1D, _x.D2D, _x.D11D, _x.D12D, _x.D1G, _x.D2G, _x.D11G, _x.D12G, _x.CPI1, _x.CPI2, _x.CPI7, _x.CPI8, _x.CP1, _x.CP2, _x.CP9, _x.CP10, _x.OUTR1, _x.OUTR2, _x.OUTR3, _x.OUTR4, _x.INR1))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -488,8 +513,8 @@ bool CP10
       end = 0
       _x = self
       start = end
-      end += 57
-      (_x.ST1, _x.ST2, _x.ST3, _x.ST4, _x.ST5, _x.ST20, _x.ST21, _x.ST22, _x.ST23, _x.ST24, _x.R1D, _x.R2D, _x.R11D, _x.R12D, _x.R1G, _x.R2G, _x.R11G, _x.R12G, _x.PI1, _x.PI2, _x.PI7, _x.PI8, _x.D1, _x.D2, _x.D11, _x.D12, _x.V1, _x.V2, _x.V11, _x.V12, _x.PS1, _x.PS2, _x.PS3, _x.PS4, _x.PS5, _x.PS6, _x.PS20, _x.PS21, _x.PS22, _x.PS23, _x.PS24, _x.D1D, _x.D2D, _x.D11D, _x.D12D, _x.D1G, _x.D2G, _x.D11G, _x.D12G, _x.CPI1, _x.CPI2, _x.CPI7, _x.CPI8, _x.CP1, _x.CP2, _x.CP9, _x.CP10,) = _get_struct_57B().unpack(str[start:end])
+      end += 62
+      (_x.ST1, _x.ST2, _x.ST3, _x.ST4, _x.ST5, _x.ST20, _x.ST21, _x.ST22, _x.ST23, _x.ST24, _x.R1D, _x.R2D, _x.R11D, _x.R12D, _x.R1G, _x.R2G, _x.R11G, _x.R12G, _x.PI1, _x.PI2, _x.PI7, _x.PI8, _x.D1, _x.D2, _x.D11, _x.D12, _x.V1, _x.V2, _x.V11, _x.V12, _x.PS1, _x.PS2, _x.PS3, _x.PS4, _x.PS5, _x.PS6, _x.PS20, _x.PS21, _x.PS22, _x.PS23, _x.PS24, _x.D1D, _x.D2D, _x.D11D, _x.D12D, _x.D1G, _x.D2G, _x.D11G, _x.D12G, _x.CPI1, _x.CPI2, _x.CPI7, _x.CPI8, _x.CP1, _x.CP2, _x.CP9, _x.CP10, _x.OUTR1, _x.OUTR2, _x.OUTR3, _x.OUTR4, _x.INR1,) = _get_struct_62B().unpack(str[start:end])
       self.ST1 = bool(self.ST1)
       self.ST2 = bool(self.ST2)
       self.ST3 = bool(self.ST3)
@@ -547,6 +572,11 @@ bool CP10
       self.CP2 = bool(self.CP2)
       self.CP9 = bool(self.CP9)
       self.CP10 = bool(self.CP10)
+      self.OUTR1 = bool(self.OUTR1)
+      self.OUTR2 = bool(self.OUTR2)
+      self.OUTR3 = bool(self.OUTR3)
+      self.OUTR4 = bool(self.OUTR4)
+      self.INR1 = bool(self.INR1)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -555,14 +585,14 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_57B = None
-def _get_struct_57B():
-    global _struct_57B
-    if _struct_57B is None:
-        _struct_57B = struct.Struct("<57B")
-    return _struct_57B
+_struct_62B = None
+def _get_struct_62B():
+    global _struct_62B
+    if _struct_62B is None:
+        _struct_62B = struct.Struct("<62B")
+    return _struct_62B
 class Retour_cellule(object):
   _type          = 'schneider/Retour_cellule'
-  _md5sum = 'c63fcfc82e9baf3268db909f613de20c'
+  _md5sum = '3f0e0e65198c27f208c173839feffeca'
   _request_class  = Retour_celluleRequest
   _response_class = Retour_celluleResponse

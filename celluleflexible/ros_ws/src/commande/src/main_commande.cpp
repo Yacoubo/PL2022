@@ -177,36 +177,43 @@ int main(int argc, char **argv)
             	aiguillage.Droite(2);
             	aiguillage.Droite(11);	
 		aiguillage.Droite(12);*/
+
+		/*if (M[0])
+		{	
+			sleep(10);
+			M[0]--;	
+			robot.DeplacerPiece(ROBOT_1,1,3);
+			M[70]--;	
+		}*/
 		if(M[0])
 		{		
-				M[0]--;		
-				cmd.Ouvrir_PS(1);
-				cmd.Ouvrir_PS(2);
-				cmd.Ouvrir_PS(3);
-				cmd.Ouvrir_PS(4);
-				cmd.Stop_PS(5);
-				cmd.Ouvrir_PS(6);
-				cmd.Ouvrir_PS(7);
-				cmd.Ouvrir_PS(8);
-				cmd.Ouvrir_PS(9);	
-				cmd.Ouvrir_PS(10);
-				cmd.Ouvrir_PS(11);
-				cmd.Ouvrir_PS(12);
-				cmd.Ouvrir_PS(13);
-				cmd.Ouvrir_PS(14);
-				cmd.Ouvrir_PS(15);
-				cmd.Ouvrir_PS(16);
-				cmd.Ouvrir_PS(17);
-				cmd.Ouvrir_PS(18);
-				cmd.Ouvrir_PS(19);	
-				cmd.Ouvrir_PS(20);
-				cmd.Ouvrir_PS(21);
-				cmd.Ouvrir_PS(22);
-				cmd.Ouvrir_PS(23);
-				cmd.Ouvrir_PS(24);			
-				
-				M[13]++;
-
+			M[0]--;		
+			cmd.Ouvrir_PS(1);
+			cmd.Ouvrir_PS(2);
+			cmd.Ouvrir_PS(3);
+			cmd.Ouvrir_PS(4);
+			cmd.Stop_PS(5);
+			cmd.Ouvrir_PS(6);
+			cmd.Ouvrir_PS(7);
+			cmd.Ouvrir_PS(8);
+			cmd.Ouvrir_PS(9);	
+			cmd.Ouvrir_PS(10);
+			cmd.Ouvrir_PS(11);
+			cmd.Ouvrir_PS(12);
+			cmd.Ouvrir_PS(13);
+			cmd.Ouvrir_PS(14);
+			cmd.Ouvrir_PS(15);
+			cmd.Ouvrir_PS(16);
+			cmd.Ouvrir_PS(17);
+			cmd.Ouvrir_PS(18);
+			cmd.Ouvrir_PS(19);	
+			cmd.Ouvrir_PS(20);
+			cmd.Ouvrir_PS(21);
+			cmd.Ouvrir_PS(22);
+			cmd.Ouvrir_PS(23);
+			cmd.Ouvrir_PS(24);			
+			
+			M[13]++;
 
 			display();
   	
@@ -242,16 +249,17 @@ int main(int argc, char **argv)
 			{	
 				M[14]--;
 				cmd.Ouvrir_PS(5);
-				M[1]++;
+				cmd.Stop_PS(21);
+				M[50]++;
 			}
 			display();
 		}
-		if(M[1])
+		if(M[50])
 		{
-			if(capteur.get_PS(20))
+			if(capteur.get_PS(21))
 			{
-				M[1]--;
-				cmd.Stop_PS(24);				
+				M[50]--;
+				robot.DeplacerPiece(ROBOT_1,2,4);				
 				M[2]++;
 			}
 			
@@ -259,7 +267,7 @@ int main(int argc, char **argv)
 		}
 		if(M[2])
 		{
-			if(capteur.get_PS(24))
+			if(robot.FinDeplacerPiece(ROBOT_1))
 			{
 				M[2]--;
 				aiguillage.Gauche(1);
@@ -274,7 +282,7 @@ int main(int argc, char **argv)
 			if(capteur.get_DG(1) && capteur.get_DG(2) && capteur.get_DG(11))
 			{
 				M[3]--;
-				cmd.Ouvrir_PS(24);
+				cmd.Ouvrir_PS(21);
 				cmd.Stop_PS(20);
 				M[4]++;
 			}
@@ -363,12 +371,56 @@ int main(int argc, char **argv)
 			if(capteur.get_PS(14))
 			{
 				M[10]--;
+				cmd.Stop_PS(22);
 				aiguillage.Gauche(7);
-				M[11]++;
+				aiguillage.Droite(8);
+				aiguillage.Droite(9);
+				aiguillage.Droite(10);
+				aiguillage.Droite(11);
+				M[51]++;
 			}
 			display();
 		}
-		
+		if(M[51]){ 
+			if(capteur.get_DG(7) && capteur.get_DD(8)  && capteur.get_DD(9)  && capteur.get_DD(10)  && capteur.get_DD(11))
+			{
+				M[51]--;
+				cmd.Ouvrir_PS(14);
+				M[52]++;
+			}
+			display();
+		}
+		if(M[52]){ 
+			if(capteur.get_PS(22))
+			{
+				M[52]--;
+				robot.DeplacerPiece(ROBOT_1,4,3);
+				aiguillage.Droite(12);
+				aiguillage.Droite(1);
+				cmd.Stop_PS(5);
+				M[53]++;
+			}
+			display();
+		}	
+		if(M[53]){ 
+			if(robot.FinDeplacerPiece(ROBOT_1) && capteur.get_DD(12)  && capteur.get_DD(1))
+			{
+				M[53]--;
+				cmd.Ouvrir_PS(22);
+				M[54]++;
+			}
+			display();
+		}
+		if(M[54]){ 
+			if(capteur.get_PS(5))
+			{
+				M[54]--;
+				
+				M[99]++;
+			}
+			display();
+		}
+				
             
             
             

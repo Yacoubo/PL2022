@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/DeplacerPieceMsg.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_ChoixMode.h
 string
 -
@@ -23,6 +39,24 @@ ros/message_operations.h
 -
 
 /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_StopControl.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+
+/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FinDeplacerPiece_Msg.h
 string
 -
 vector
@@ -146,6 +180,10 @@ schneider/Msg_SensorState.h
 commande_locale/Msg_StopControl.h
 /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/schneider/src/commande_locale/Msg_StopControl.h
 commande_locale/Msg_ChoixMode.h
+-
+commande_locale/DeplacerPieceMsg.h
+-
+robots/FinDeplacerPiece_Msg.h
 -
 std_msgs/Int32.h
 -

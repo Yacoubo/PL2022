@@ -65,6 +65,7 @@ commande/CMakeFiles/run.dir/src/AigsInterface.cpp.o: /opt/ros/melodic/include/xm
 
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/DeplacerPieceMsg.h
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_AddProduct.h
+commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_ChoixMode.h
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/RobotJoints.h
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProduct.h
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductPushBack.h
@@ -73,6 +74,7 @@ commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /home/etudiant/TERcellule
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductRequest.h
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductResponse.h
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FaireTacheMsg.h
+commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FinDeplacerPiece_Msg.h
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/MoveRobot.h
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/Msg_numrobot.h
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/RobotsInterface.cpp
@@ -135,6 +137,7 @@ commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /opt/ros/melodic/include/
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /opt/ros/melodic/include/rosconsole/macros_generated.h
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /opt/ros/melodic/include/std_msgs/Bool.h
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /opt/ros/melodic/include/std_msgs/Byte.h
+commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /opt/ros/melodic/include/std_msgs/Header.h
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /opt/ros/melodic/include/std_msgs/Int32.h
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h
@@ -274,6 +277,7 @@ commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexibl
 commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Actionneurs.h
 commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/DeplacerPieceMsg.h
 commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_AddProduct.h
+commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_ChoixMode.h
 commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_PinControl.h
 commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_StopControl.h
 commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_SwitchControl.h
@@ -288,6 +292,7 @@ commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexibl
 commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvFinInitRequest.h
 commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvFinInitResponse.h
 commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FaireTacheMsg.h
+commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FinDeplacerPiece_Msg.h
 commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/MoveRobot.h
 commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/Msg_numrobot.h
 commande/CMakeFiles/run.dir/src/commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/RobotsInterface.h
@@ -424,6 +429,7 @@ commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcellulefl
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Actionneurs.h
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/DeplacerPieceMsg.h
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_AddProduct.h
+commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_ChoixMode.h
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_PinControl.h
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_StopControl.h
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_SwitchControl.h
@@ -438,6 +444,7 @@ commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcellulefl
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvFinInitRequest.h
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvFinInitResponse.h
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FaireTacheMsg.h
+commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FinDeplacerPiece_Msg.h
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/MoveRobot.h
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/Msg_numrobot.h
 commande/CMakeFiles/run.dir/src/main_commande.cpp.o: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/AigsInterface.h

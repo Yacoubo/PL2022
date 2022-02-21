@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::schneider::Retour_cellule > {
   static const char* value()
   {
-    return "c63fcfc82e9baf3268db909f613de20c";
+    return "3f0e0e65198c27f208c173839feffeca";
   }
 
   static const char* value(const ::schneider::Retour_cellule&) { return value(); }

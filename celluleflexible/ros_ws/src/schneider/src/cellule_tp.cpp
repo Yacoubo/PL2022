@@ -15,7 +15,9 @@ Cellule_tp::Cellule_tp(ros::NodeHandle noeud)
 	cmd_aigGauche_cell=noeud.subscribe("/commande/Simulation/AiguillageGauche",100,&Cellule_tp::AigGaucheCallback,this);
 	cmd_aigDroite_cell=noeud.subscribe("/commande/Simulation/AiguillageDroite",100,&Cellule_tp::AigDroiteCallback,this);
 	cmd_PS=noeud.subscribe("/commande/Simulation/Actionneurs_stops", 100,&Cellule_tp::CmdPSCallback,this);
+	robot=noeud.subscribe("/commande/Simulation/DeplacerPiece",10,&Cellule_tp::RobCallabck,this);
 	choixMode = noeud.subscribe("/commande_locale/ChoixMode", 10,&Cellule_tp::TypeMode,this);
+	pub_fintache = noeud.advertise<robots::FinDeplacerPiece_Msg>("/commande/Simulation/finTache", 1);
 	pub = noeud.advertise<std_msgs::String>("/control_cellule", 1);
 	cap = noeud.advertise<schneider::Msg_SensorState>("/commande/Simulation/Capteurs", 1);
 	client = noeud.serviceClient<schneider::Retour_cellule>("retour_cellule");
@@ -123,10 +125,11 @@ void Cellule_tp::read()
 		SensorState.CP[2] = srv.response.CP2;
 		SensorState.CP[9] = srv.response.CP9;
 		SensorState.CP[10] = srv.response.CP10;
+		SensorRobots.FinDeplacerR1 = srv.response.INR1;
 		if(mode==1){
 			cap.publish(SensorState);
+			pub_fintache.publish(SensorRobots);
 		}
-
 
 
 	}
@@ -233,6 +236,12 @@ void Cellule_tp::CmdPSCallback(const commande_locale::Msg_StopControl actionneur
 		}
 		for(i=0;i<10;i++){
 			if(actionneurs_simulation_Stop.GO[tabPS[i]]==1){
+				if(tabPS[i] == 21){
+					this->write({{20,0}});
+				}
+				else if(tabPS[i] == 22){
+					this->write({{21,0}});
+				}
 				this->write({{i, 1}});
 			}
 			else
@@ -243,4 +252,64 @@ void Cellule_tp::CmdPSCallback(const commande_locale::Msg_StopControl actionneur
 	}
 
 }
+
+void Cellule_tp::RobCallabck(const commande_locale::DeplacerPieceMsg msg)
+{
+	
+	if (msg.num_robot==1)
+	{
+		if (msg.positionA==3 || msg.positionB==3)
+		{
+			this->write({{21,1}});
+		}
+		if (msg.positionA==2 || msg.positionB==2)
+		{
+			this->write({{20,1}});
+		}
+		if(msg.positionA==3)
+		{
+			this->write({{36,1},{34,1}});
+			ros::Duration(2).sleep();
+			this->write({{36,0},{34,0}});
+		}
+		else if(msg.positionA==2)
+		{
+			this->write({{36,1},{35,1}});
+			ros::Duration(2).sleep();
+			this->write({{36,0},{35,0}});
+		}
+		else if (msg.positionB==3)
+		{
+			this->write({{37,1},{34,1}});
+			ros::Duration(2).sleep();
+			this->write({{37,0},{34,0}});
+		}
+		else if (msg.positionB==2)
+		{
+			this->write({{37,1},{35,1}});
+			ros::Duration(2).sleep();
+			this->write({{37,0},{35,0}});
+		}
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
 

@@ -11,7 +11,9 @@
 #include <std_msgs/Byte.h>
 #include <vector>
 #include "robots/FaireTacheMsg.h"
+#include "robots/FinDeplacerPiece_Msg.h"
 #include "robots/Msg_numrobot.h"
+#include <commande_locale/Msg_ChoixMode.h>
 #include "commande_locale/SrvAddProduct.h"
 #include "commande_locale/Msg_AddProduct.h"
 #include "commande_locale/DeplacerPieceMsg.h"
@@ -62,7 +64,9 @@ private:
 	ros::Publisher pubProductAdd;
 	ros::Publisher pub_deplacer_piece;
 
+	ros::Subscriber sub_finTache;
 	ros::Subscriber sub_retourRobot;
+	ros::Subscriber choixMode;
 
 	ros::ServiceClient client;
 	ros::ServiceServer serverPushBack;
@@ -79,6 +83,8 @@ private:
 	int pince[4];
 	int robotTask[4][2];
 	int robotMacroDeplacement[4];
+	int FinTacheAtelier;
+	int mode;
 
 	// std::vector<int> produit_a_ajouter; SUN todelete
 
@@ -114,6 +120,8 @@ public:
 	int FinDeplacerPiece(int num_robot);
 	void Evacuer();
 	void AjouterProduit(int poste, int produit);
+	void TypeMode(const commande_locale::Msg_ChoixMode::ConstPtr& msg1);
+	void VerifFinDeplacerPiece(const robots::FinDeplacerPiece_Msg::ConstPtr& msg2);
 	// int AjoutProduitEnAttente(); SUN to delete
 
 	bool ProductAddPushBack(commande_locale::SrvAddProductPushBack::Request& req, commande_locale::SrvAddProductPushBack::Response& rep);

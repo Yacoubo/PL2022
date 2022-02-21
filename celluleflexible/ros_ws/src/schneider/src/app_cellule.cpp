@@ -91,6 +91,11 @@ int CP1 = 72;
 int CP2 = 73;
 int CP9 = 74;
 int CP10 = 75;
+int OUTR1=34;
+int OUTR2=35;
+int OUTR3=36;
+int OUTR4=37;
+int INR1=38;
 
 
 // déclaration des informations de bloc

@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/robots/msg/MoveRobot.msg;/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/robots/msg/FaireTacheMsg.msg;/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/robots/msg/Msg_numrobot.msg"
+messages_str = "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/robots/msg/MoveRobot.msg;/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/robots/msg/FaireTacheMsg.msg;/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/robots/msg/FinDeplacerPiece_Msg.msg;/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/robots/msg/Msg_numrobot.msg"
 services_str = ""
 pkg_name = "robots"
 dependencies_str = "std_msgs"

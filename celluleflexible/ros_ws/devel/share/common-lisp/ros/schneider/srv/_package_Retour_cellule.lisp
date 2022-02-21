@@ -115,4 +115,14 @@
           CP9
           CP10-VAL
           CP10
+          OUTR1-VAL
+          OUTR1
+          OUTR2-VAL
+          OUTR2
+          OUTR3-VAL
+          OUTR3
+          OUTR4-VAL
+          OUTR4
+          INR1-VAL
+          INR1
 ))

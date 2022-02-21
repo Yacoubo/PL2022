@@ -52,15 +52,22 @@ RobotsInterface::RobotsInterface(ros::NodeHandle noeud, int nombre_robot)
 
 	//Retour des robots vers la commande
 	sub_retourRobot = noeud.subscribe("/commande/Simulation/retourCommande", 100, &RobotsInterface::RetourRobotCallback,this);
-
+	sub_finTache=noeud.subscribe<robots::FinDeplacerPiece_Msg>("/commande/Simulation/finTache", 10,&RobotsInterface::VerifFinDeplacerPiece,this);
 	client = noeud.serviceClient<commande_locale::SrvAddProduct>("srv_add_product");
 	serverPushBack = noeud.advertiseService("srv_add_product_push_back",&RobotsInterface::ProductAddPushBack,this);
+	choixMode = noeud.subscribe("/commande_locale/ChoixMode", 10,&RobotsInterface::TypeMode,this);
 
 	ros::Duration(1).sleep();
 }
 
 RobotsInterface::~RobotsInterface()
 {
+}
+
+void RobotsInterface::TypeMode(const commande_locale::Msg_ChoixMode::ConstPtr& msg1)
+{
+	mode = msg1->mode;
+
 }
 
 /*** Envoyer les robots automatiquement ***/
@@ -359,18 +366,30 @@ int RobotsInterface::TacheFinie(int num_poste)
 	return Etat;
 }
 
+void RobotsInterface::VerifFinDeplacerPiece(const robots::FinDeplacerPiece_Msg::ConstPtr& msg2){
+	FinTacheAtelier = msg2->FinDeplacerR1;
+}
+
 int RobotsInterface::FinDeplacerPiece(int numRobot)
 {
-	int Etat;
-	if(numRobot<1 || numRobot>nbRobot)
-	{
-		cout <<  BOLDMAGENTA << "Le numero du robot doit etre compris entre 1 et " << nbRobot << "." << RESET << endl;
-		return 1;
-	}
-	else
-		Etat=robotMacroDeplacement[numRobot-1];
+	if(mode==0){
+		int Etat;
+		if(numRobot<1 || numRobot>nbRobot)
+		{
+			cout <<  BOLDMAGENTA << "Le numero du robot doit etre compris entre 1 et " << nbRobot << "." << RESET << endl;
+			return 1;
+		}
+		else
+			Etat=robotMacroDeplacement[numRobot-1];
 
-	return Etat;
+		return Etat;
+	}
+	else if (mode==1)
+	{
+		if (numRobot==1){
+			return FinTacheAtelier;
+		}
+	}
 }
 
 

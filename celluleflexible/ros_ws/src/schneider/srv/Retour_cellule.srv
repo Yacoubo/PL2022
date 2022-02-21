@@ -57,3 +57,8 @@ bool CP1
 bool CP2
 bool CP9
 bool CP10
+bool OUTR1
+bool OUTR2
+bool OUTR3
+bool OUTR4
+bool INR1

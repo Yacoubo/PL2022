@@ -149,6 +149,11 @@ class Retour_celluleResponse {
       this.CP2 = null;
       this.CP9 = null;
       this.CP10 = null;
+      this.OUTR1 = null;
+      this.OUTR2 = null;
+      this.OUTR3 = null;
+      this.OUTR4 = null;
+      this.INR1 = null;
     }
     else {
       if (initObj.hasOwnProperty('ST1')) {
@@ -493,6 +498,36 @@ class Retour_celluleResponse {
       else {
         this.CP10 = false;
       }
+      if (initObj.hasOwnProperty('OUTR1')) {
+        this.OUTR1 = initObj.OUTR1
+      }
+      else {
+        this.OUTR1 = false;
+      }
+      if (initObj.hasOwnProperty('OUTR2')) {
+        this.OUTR2 = initObj.OUTR2
+      }
+      else {
+        this.OUTR2 = false;
+      }
+      if (initObj.hasOwnProperty('OUTR3')) {
+        this.OUTR3 = initObj.OUTR3
+      }
+      else {
+        this.OUTR3 = false;
+      }
+      if (initObj.hasOwnProperty('OUTR4')) {
+        this.OUTR4 = initObj.OUTR4
+      }
+      else {
+        this.OUTR4 = false;
+      }
+      if (initObj.hasOwnProperty('INR1')) {
+        this.INR1 = initObj.INR1
+      }
+      else {
+        this.INR1 = false;
+      }
     }
   }
 
@@ -612,6 +647,16 @@ class Retour_celluleResponse {
     bufferOffset = _serializer.bool(obj.CP9, buffer, bufferOffset);
     // Serialize message field [CP10]
     bufferOffset = _serializer.bool(obj.CP10, buffer, bufferOffset);
+    // Serialize message field [OUTR1]
+    bufferOffset = _serializer.bool(obj.OUTR1, buffer, bufferOffset);
+    // Serialize message field [OUTR2]
+    bufferOffset = _serializer.bool(obj.OUTR2, buffer, bufferOffset);
+    // Serialize message field [OUTR3]
+    bufferOffset = _serializer.bool(obj.OUTR3, buffer, bufferOffset);
+    // Serialize message field [OUTR4]
+    bufferOffset = _serializer.bool(obj.OUTR4, buffer, bufferOffset);
+    // Serialize message field [INR1]
+    bufferOffset = _serializer.bool(obj.INR1, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -733,11 +778,21 @@ class Retour_celluleResponse {
     data.CP9 = _deserializer.bool(buffer, bufferOffset);
     // Deserialize message field [CP10]
     data.CP10 = _deserializer.bool(buffer, bufferOffset);
+    // Deserialize message field [OUTR1]
+    data.OUTR1 = _deserializer.bool(buffer, bufferOffset);
+    // Deserialize message field [OUTR2]
+    data.OUTR2 = _deserializer.bool(buffer, bufferOffset);
+    // Deserialize message field [OUTR3]
+    data.OUTR3 = _deserializer.bool(buffer, bufferOffset);
+    // Deserialize message field [OUTR4]
+    data.OUTR4 = _deserializer.bool(buffer, bufferOffset);
+    // Deserialize message field [INR1]
+    data.INR1 = _deserializer.bool(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 57;
+    return 62;
   }
 
   static datatype() {
@@ -747,7 +802,7 @@ class Retour_celluleResponse {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'd28641961c36e4a329584c37028b3fa0';
+    return '383fcdcd810369913b6bf461f1c04058';
   }
 
   static messageDefinition() {
@@ -810,6 +865,11 @@ class Retour_celluleResponse {
     bool CP2
     bool CP9
     bool CP10
+    bool OUTR1
+    bool OUTR2
+    bool OUTR3
+    bool OUTR4
+    bool INR1
     
     
     `;
@@ -1220,6 +1280,41 @@ class Retour_celluleResponse {
       resolved.CP10 = false
     }
 
+    if (msg.OUTR1 !== undefined) {
+      resolved.OUTR1 = msg.OUTR1;
+    }
+    else {
+      resolved.OUTR1 = false
+    }
+
+    if (msg.OUTR2 !== undefined) {
+      resolved.OUTR2 = msg.OUTR2;
+    }
+    else {
+      resolved.OUTR2 = false
+    }
+
+    if (msg.OUTR3 !== undefined) {
+      resolved.OUTR3 = msg.OUTR3;
+    }
+    else {
+      resolved.OUTR3 = false
+    }
+
+    if (msg.OUTR4 !== undefined) {
+      resolved.OUTR4 = msg.OUTR4;
+    }
+    else {
+      resolved.OUTR4 = false
+    }
+
+    if (msg.INR1 !== undefined) {
+      resolved.INR1 = msg.INR1;
+    }
+    else {
+      resolved.INR1 = false
+    }
+
     return resolved;
     }
 };
@@ -1227,6 +1322,6 @@ class Retour_celluleResponse {
 module.exports = {
   Request: Retour_celluleRequest,
   Response: Retour_celluleResponse,
-  md5sum() { return 'c63fcfc82e9baf3268db909f613de20c'; },
+  md5sum() { return '3f0e0e65198c27f208c173839feffeca'; },
   datatype() { return 'schneider/Retour_cellule'; }
 };

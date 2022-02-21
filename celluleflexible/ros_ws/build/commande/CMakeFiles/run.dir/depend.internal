@@ -66,6 +66,7 @@ commande/CMakeFiles/run.dir/src/AigsInterface.cpp.o
 commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/DeplacerPieceMsg.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_AddProduct.h
+ /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_ChoixMode.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/RobotJoints.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProduct.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductPushBack.h
@@ -74,6 +75,7 @@ commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductRequest.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductResponse.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FaireTacheMsg.h
+ /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FinDeplacerPiece_Msg.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/MoveRobot.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/Msg_numrobot.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/RobotsInterface.cpp
@@ -136,6 +138,7 @@ commande/CMakeFiles/run.dir/src/RobotsInterface.cpp.o
  /opt/ros/melodic/include/rosconsole/macros_generated.h
  /opt/ros/melodic/include/std_msgs/Bool.h
  /opt/ros/melodic/include/std_msgs/Byte.h
+ /opt/ros/melodic/include/std_msgs/Header.h
  /opt/ros/melodic/include/std_msgs/Int32.h
  /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h
@@ -275,6 +278,7 @@ commande/CMakeFiles/run.dir/src/commande.cpp.o
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Actionneurs.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/DeplacerPieceMsg.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_AddProduct.h
+ /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_ChoixMode.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_PinControl.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_StopControl.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_SwitchControl.h
@@ -289,6 +293,7 @@ commande/CMakeFiles/run.dir/src/commande.cpp.o
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvFinInitRequest.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvFinInitResponse.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FaireTacheMsg.h
+ /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FinDeplacerPiece_Msg.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/MoveRobot.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/Msg_numrobot.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/RobotsInterface.h
@@ -425,6 +430,7 @@ commande/CMakeFiles/run.dir/src/main_commande.cpp.o
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Actionneurs.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/DeplacerPieceMsg.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_AddProduct.h
+ /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_ChoixMode.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_PinControl.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_StopControl.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_SwitchControl.h
@@ -439,6 +445,7 @@ commande/CMakeFiles/run.dir/src/main_commande.cpp.o
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvFinInitRequest.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvFinInitResponse.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FaireTacheMsg.h
+ /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FinDeplacerPiece_Msg.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/MoveRobot.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/Msg_numrobot.h
  /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/AigsInterface.h

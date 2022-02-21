@@ -7,6 +7,8 @@
 #include <schneider/Msg_SensorState.h>
 #include "commande_locale/Msg_StopControl.h"
 #include <commande_locale/Msg_ChoixMode.h>
+#include <commande_locale/DeplacerPieceMsg.h>
+#include <robots/FinDeplacerPiece_Msg.h>
 #include <std_msgs/Int32.h>
 #include <unistd.h>
 #include <std_msgs/Byte.h>
@@ -19,6 +21,7 @@ class Cellule_tp
 
 private:
 	ros::Publisher pub;
+	ros::Publisher pub_fintache;
 	ros::Publisher cap;
 	ros::Subscriber choixMode;
 	std_msgs::String msg;
@@ -28,7 +31,9 @@ private:
 	ros::Subscriber cmd_aigGauche_cell;
 	ros::Subscriber cmd_aigDroite_cell;
 	ros::Subscriber cmd_PS;
+	ros::Subscriber robot;
 	schneider::Msg_SensorState SensorState;
+	robots::FinDeplacerPiece_Msg SensorRobots;
 	int mode;
 	
 public:
@@ -39,6 +44,7 @@ public:
 	void AigGaucheCallback(const std_msgs::Int32::ConstPtr& msg_aigs);
 	void AigDroiteCallback(const std_msgs::Int32::ConstPtr& msg_aigs);
 	void CmdPSCallback(const commande_locale::Msg_StopControl actionneurs_simulation_Stop);
+	void RobCallabck(const commande_locale::DeplacerPieceMsg msg);
 	void TypeMode(const commande_locale::Msg_ChoixMode::ConstPtr& msg1);
 	bool ST1;
 	bool ST2;

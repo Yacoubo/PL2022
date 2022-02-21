@@ -41,6 +41,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robots/msg" TYPE FILE FILES
     "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/robots/msg/MoveRobot.msg"
     "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/robots/msg/FaireTacheMsg.msg"
+    "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/robots/msg/FinDeplacerPiece_Msg.msg"
     "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/robots/msg/Msg_numrobot.msg"
     )
 endif()

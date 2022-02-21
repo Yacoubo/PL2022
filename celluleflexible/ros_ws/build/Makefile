@@ -2079,45 +2079,6 @@ automates_generate_messages_py/fast:
 .PHONY : automates_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named robots_gennodejs
-
-# Build rule for target.
-robots_gennodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 robots_gennodejs
-.PHONY : robots_gennodejs
-
-# fast build rule for target.
-robots_gennodejs/fast:
-	$(MAKE) -f robots/CMakeFiles/robots_gennodejs.dir/build.make robots/CMakeFiles/robots_gennodejs.dir/build
-.PHONY : robots_gennodejs/fast
-
-#=============================================================================
-# Target rules for targets named _robots_generate_messages_check_deps_Msg_numrobot
-
-# Build rule for target.
-_robots_generate_messages_check_deps_Msg_numrobot: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _robots_generate_messages_check_deps_Msg_numrobot
-.PHONY : _robots_generate_messages_check_deps_Msg_numrobot
-
-# fast build rule for target.
-_robots_generate_messages_check_deps_Msg_numrobot/fast:
-	$(MAKE) -f robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/build.make robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/build
-.PHONY : _robots_generate_messages_check_deps_Msg_numrobot/fast
-
-#=============================================================================
-# Target rules for targets named robot
-
-# Build rule for target.
-robot: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 robot
-.PHONY : robot
-
-# fast build rule for target.
-robot/fast:
-	$(MAKE) -f robots/CMakeFiles/robot.dir/build.make robots/CMakeFiles/robot.dir/build
-.PHONY : robot/fast
-
-#=============================================================================
 # Target rules for targets named robots_generate_messages_lisp
 
 # Build rule for target.
@@ -2157,6 +2118,19 @@ _robots_generate_messages_check_deps_FaireTacheMsg/fast:
 .PHONY : _robots_generate_messages_check_deps_FaireTacheMsg/fast
 
 #=============================================================================
+# Target rules for targets named _robots_generate_messages_check_deps_MoveRobot
+
+# Build rule for target.
+_robots_generate_messages_check_deps_MoveRobot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _robots_generate_messages_check_deps_MoveRobot
+.PHONY : _robots_generate_messages_check_deps_MoveRobot
+
+# fast build rule for target.
+_robots_generate_messages_check_deps_MoveRobot/fast:
+	$(MAKE) -f robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/build.make robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/build
+.PHONY : _robots_generate_messages_check_deps_MoveRobot/fast
+
+#=============================================================================
 # Target rules for targets named robots_generate_messages
 
 # Build rule for target.
@@ -2168,6 +2142,19 @@ robots_generate_messages: cmake_check_build_system
 robots_generate_messages/fast:
 	$(MAKE) -f robots/CMakeFiles/robots_generate_messages.dir/build.make robots/CMakeFiles/robots_generate_messages.dir/build
 .PHONY : robots_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named _robots_generate_messages_check_deps_FinDeplacerPiece_Msg
+
+# Build rule for target.
+_robots_generate_messages_check_deps_FinDeplacerPiece_Msg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _robots_generate_messages_check_deps_FinDeplacerPiece_Msg
+.PHONY : _robots_generate_messages_check_deps_FinDeplacerPiece_Msg
+
+# fast build rule for target.
+_robots_generate_messages_check_deps_FinDeplacerPiece_Msg/fast:
+	$(MAKE) -f robots/CMakeFiles/_robots_generate_messages_check_deps_FinDeplacerPiece_Msg.dir/build.make robots/CMakeFiles/_robots_generate_messages_check_deps_FinDeplacerPiece_Msg.dir/build
+.PHONY : _robots_generate_messages_check_deps_FinDeplacerPiece_Msg/fast
 
 #=============================================================================
 # Target rules for targets named robots_genpy
@@ -2183,17 +2170,43 @@ robots_genpy/fast:
 .PHONY : robots_genpy/fast
 
 #=============================================================================
-# Target rules for targets named _robots_generate_messages_check_deps_MoveRobot
+# Target rules for targets named robot
 
 # Build rule for target.
-_robots_generate_messages_check_deps_MoveRobot: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _robots_generate_messages_check_deps_MoveRobot
-.PHONY : _robots_generate_messages_check_deps_MoveRobot
+robot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 robot
+.PHONY : robot
 
 # fast build rule for target.
-_robots_generate_messages_check_deps_MoveRobot/fast:
-	$(MAKE) -f robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/build.make robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/build
-.PHONY : _robots_generate_messages_check_deps_MoveRobot/fast
+robot/fast:
+	$(MAKE) -f robots/CMakeFiles/robot.dir/build.make robots/CMakeFiles/robot.dir/build
+.PHONY : robot/fast
+
+#=============================================================================
+# Target rules for targets named _robots_generate_messages_check_deps_Msg_numrobot
+
+# Build rule for target.
+_robots_generate_messages_check_deps_Msg_numrobot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _robots_generate_messages_check_deps_Msg_numrobot
+.PHONY : _robots_generate_messages_check_deps_Msg_numrobot
+
+# fast build rule for target.
+_robots_generate_messages_check_deps_Msg_numrobot/fast:
+	$(MAKE) -f robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/build.make robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/build
+.PHONY : _robots_generate_messages_check_deps_Msg_numrobot/fast
+
+#=============================================================================
+# Target rules for targets named robots_gennodejs
+
+# Build rule for target.
+robots_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 robots_gennodejs
+.PHONY : robots_gennodejs
+
+# fast build rule for target.
+robots_gennodejs/fast:
+	$(MAKE) -f robots/CMakeFiles/robots_gennodejs.dir/build.make robots/CMakeFiles/robots_gennodejs.dir/build
+.PHONY : robots_gennodejs/fast
 
 #=============================================================================
 # Target rules for targets named robots_generate_messages_eus
@@ -2446,15 +2459,16 @@ help:
 	@echo "... start"
 	@echo "... automates_generate_messages_nodejs"
 	@echo "... automates_generate_messages_py"
-	@echo "... robots_gennodejs"
-	@echo "... _robots_generate_messages_check_deps_Msg_numrobot"
-	@echo "... robot"
 	@echo "... robots_generate_messages_lisp"
 	@echo "... robots_generate_messages_cpp"
 	@echo "... _robots_generate_messages_check_deps_FaireTacheMsg"
-	@echo "... robots_generate_messages"
-	@echo "... robots_genpy"
 	@echo "... _robots_generate_messages_check_deps_MoveRobot"
+	@echo "... robots_generate_messages"
+	@echo "... _robots_generate_messages_check_deps_FinDeplacerPiece_Msg"
+	@echo "... robots_genpy"
+	@echo "... robot"
+	@echo "... _robots_generate_messages_check_deps_Msg_numrobot"
+	@echo "... robots_gennodejs"
 	@echo "... robots_generate_messages_eus"
 	@echo "... robots_generate_messages_nodejs"
 	@echo "... robots_geneus"

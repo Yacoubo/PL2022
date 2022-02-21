@@ -57,7 +57,7 @@
 
 (defclass schneider::Retour_celluleResponse
   :super ros::object
-  :slots (_ST1 _ST2 _ST3 _ST4 _ST5 _ST20 _ST21 _ST22 _ST23 _ST24 _R1D _R2D _R11D _R12D _R1G _R2G _R11G _R12G _PI1 _PI2 _PI7 _PI8 _D1 _D2 _D11 _D12 _V1 _V2 _V11 _V12 _PS1 _PS2 _PS3 _PS4 _PS5 _PS6 _PS20 _PS21 _PS22 _PS23 _PS24 _D1D _D2D _D11D _D12D _D1G _D2G _D11G _D12G _CPI1 _CPI2 _CPI7 _CPI8 _CP1 _CP2 _CP9 _CP10 ))
+  :slots (_ST1 _ST2 _ST3 _ST4 _ST5 _ST20 _ST21 _ST22 _ST23 _ST24 _R1D _R2D _R11D _R12D _R1G _R2G _R11G _R12G _PI1 _PI2 _PI7 _PI8 _D1 _D2 _D11 _D12 _V1 _V2 _V11 _V12 _PS1 _PS2 _PS3 _PS4 _PS5 _PS6 _PS20 _PS21 _PS22 _PS23 _PS24 _D1D _D2D _D11D _D12D _D1G _D2G _D11G _D12G _CPI1 _CPI2 _CPI7 _CPI8 _CP1 _CP2 _CP9 _CP10 _OUTR1 _OUTR2 _OUTR3 _OUTR4 _INR1 ))
 
 (defmethod schneider::Retour_celluleResponse
   (:init
@@ -119,6 +119,11 @@
     ((:CP2 __CP2) nil)
     ((:CP9 __CP9) nil)
     ((:CP10 __CP10) nil)
+    ((:OUTR1 __OUTR1) nil)
+    ((:OUTR2 __OUTR2) nil)
+    ((:OUTR3 __OUTR3) nil)
+    ((:OUTR4 __OUTR4) nil)
+    ((:INR1 __INR1) nil)
     )
    (send-super :init)
    (setq _ST1 __ST1)
@@ -178,6 +183,11 @@
    (setq _CP2 __CP2)
    (setq _CP9 __CP9)
    (setq _CP10 __CP10)
+   (setq _OUTR1 __OUTR1)
+   (setq _OUTR2 __OUTR2)
+   (setq _OUTR3 __OUTR3)
+   (setq _OUTR4 __OUTR4)
+   (setq _INR1 __INR1)
    self)
   (:ST1
    (&optional __ST1)
@@ -350,6 +360,21 @@
   (:CP10
    (&optional __CP10)
    (if __CP10 (setq _CP10 __CP10)) _CP10)
+  (:OUTR1
+   (&optional __OUTR1)
+   (if __OUTR1 (setq _OUTR1 __OUTR1)) _OUTR1)
+  (:OUTR2
+   (&optional __OUTR2)
+   (if __OUTR2 (setq _OUTR2 __OUTR2)) _OUTR2)
+  (:OUTR3
+   (&optional __OUTR3)
+   (if __OUTR3 (setq _OUTR3 __OUTR3)) _OUTR3)
+  (:OUTR4
+   (&optional __OUTR4)
+   (if __OUTR4 (setq _OUTR4 __OUTR4)) _OUTR4)
+  (:INR1
+   (&optional __INR1)
+   (if __INR1 (setq _INR1 __INR1)) _INR1)
   (:serialization-length
    ()
    (+
@@ -466,6 +491,16 @@
     ;; bool _CP9
     1
     ;; bool _CP10
+    1
+    ;; bool _OUTR1
+    1
+    ;; bool _OUTR2
+    1
+    ;; bool _OUTR3
+    1
+    ;; bool _OUTR4
+    1
+    ;; bool _INR1
     1
     ))
   (:serialize
@@ -586,6 +621,16 @@
        (if _CP9 (write-byte -1 s) (write-byte 0 s))
      ;; bool _CP10
        (if _CP10 (write-byte -1 s) (write-byte 0 s))
+     ;; bool _OUTR1
+       (if _OUTR1 (write-byte -1 s) (write-byte 0 s))
+     ;; bool _OUTR2
+       (if _OUTR2 (write-byte -1 s) (write-byte 0 s))
+     ;; bool _OUTR3
+       (if _OUTR3 (write-byte -1 s) (write-byte 0 s))
+     ;; bool _OUTR4
+       (if _OUTR4 (write-byte -1 s) (write-byte 0 s))
+     ;; bool _INR1
+       (if _INR1 (write-byte -1 s) (write-byte 0 s))
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
@@ -704,6 +749,16 @@
      (setq _CP9 (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;; bool _CP10
      (setq _CP10 (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
+   ;; bool _OUTR1
+     (setq _OUTR1 (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
+   ;; bool _OUTR2
+     (setq _OUTR2 (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
+   ;; bool _OUTR3
+     (setq _OUTR3 (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
+   ;; bool _OUTR4
+     (setq _OUTR4 (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
+   ;; bool _INR1
+     (setq _INR1 (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;;
    self)
   )
@@ -712,7 +767,7 @@
   :super ros::object
   :slots ())
 
-(setf (get schneider::Retour_cellule :md5sum-) "c63fcfc82e9baf3268db909f613de20c")
+(setf (get schneider::Retour_cellule :md5sum-) "3f0e0e65198c27f208c173839feffeca")
 (setf (get schneider::Retour_cellule :datatype-) "schneider/Retour_cellule")
 (setf (get schneider::Retour_cellule :request) schneider::Retour_celluleRequest)
 (setf (get schneider::Retour_cellule :response) schneider::Retour_celluleResponse)
@@ -720,7 +775,7 @@
 (defmethod schneider::Retour_celluleRequest
   (:response () (instance schneider::Retour_celluleResponse :init)))
 
-(setf (get schneider::Retour_celluleRequest :md5sum-) "c63fcfc82e9baf3268db909f613de20c")
+(setf (get schneider::Retour_celluleRequest :md5sum-) "3f0e0e65198c27f208c173839feffeca")
 (setf (get schneider::Retour_celluleRequest :datatype-) "schneider/Retour_celluleRequest")
 (setf (get schneider::Retour_celluleRequest :definition-)
       "int32 memoire
@@ -782,10 +837,15 @@ bool CP1
 bool CP2
 bool CP9
 bool CP10
+bool OUTR1
+bool OUTR2
+bool OUTR3
+bool OUTR4
+bool INR1
 
 ")
 
-(setf (get schneider::Retour_celluleResponse :md5sum-) "c63fcfc82e9baf3268db909f613de20c")
+(setf (get schneider::Retour_celluleResponse :md5sum-) "3f0e0e65198c27f208c173839feffeca")
 (setf (get schneider::Retour_celluleResponse :datatype-) "schneider/Retour_celluleResponse")
 (setf (get schneider::Retour_celluleResponse :definition-)
       "int32 memoire
@@ -847,11 +907,16 @@ bool CP1
 bool CP2
 bool CP9
 bool CP10
+bool OUTR1
+bool OUTR2
+bool OUTR3
+bool OUTR4
+bool INR1
 
 ")
 
 
 
-(provide :schneider/Retour_cellule "c63fcfc82e9baf3268db909f613de20c")
+(provide :schneider/Retour_cellule "3f0e0e65198c27f208c173839feffeca")
 
 

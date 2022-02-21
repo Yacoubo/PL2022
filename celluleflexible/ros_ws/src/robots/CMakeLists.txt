@@ -20,6 +20,7 @@ add_message_files(
    FILES
    MoveRobot.msg
    FaireTacheMsg.msg
+   FinDeplacerPiece_Msg.msg
    Msg_numrobot.msg
 )
 

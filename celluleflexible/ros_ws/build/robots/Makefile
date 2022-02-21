@@ -168,51 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-robots/CMakeFiles/robots_gennodejs.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robots/CMakeFiles/robots_gennodejs.dir/rule
-.PHONY : robots/CMakeFiles/robots_gennodejs.dir/rule
-
-# Convenience name for target.
-robots_gennodejs: robots/CMakeFiles/robots_gennodejs.dir/rule
-
-.PHONY : robots_gennodejs
-
-# fast build rule for target.
-robots_gennodejs/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f robots/CMakeFiles/robots_gennodejs.dir/build.make robots/CMakeFiles/robots_gennodejs.dir/build
-.PHONY : robots_gennodejs/fast
-
-# Convenience name for target.
-robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/rule
-.PHONY : robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/rule
-
-# Convenience name for target.
-_robots_generate_messages_check_deps_Msg_numrobot: robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/rule
-
-.PHONY : _robots_generate_messages_check_deps_Msg_numrobot
-
-# fast build rule for target.
-_robots_generate_messages_check_deps_Msg_numrobot/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/build.make robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/build
-.PHONY : _robots_generate_messages_check_deps_Msg_numrobot/fast
-
-# Convenience name for target.
-robots/CMakeFiles/robot.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robots/CMakeFiles/robot.dir/rule
-.PHONY : robots/CMakeFiles/robot.dir/rule
-
-# Convenience name for target.
-robot: robots/CMakeFiles/robot.dir/rule
-
-.PHONY : robot
-
-# fast build rule for target.
-robot/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f robots/CMakeFiles/robot.dir/build.make robots/CMakeFiles/robot.dir/build
-.PHONY : robot/fast
-
-# Convenience name for target.
 robots/CMakeFiles/robots_generate_messages_lisp.dir/rule:
 	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robots/CMakeFiles/robots_generate_messages_lisp.dir/rule
 .PHONY : robots/CMakeFiles/robots_generate_messages_lisp.dir/rule
@@ -258,6 +213,21 @@ _robots_generate_messages_check_deps_FaireTacheMsg/fast:
 .PHONY : _robots_generate_messages_check_deps_FaireTacheMsg/fast
 
 # Convenience name for target.
+robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/rule
+.PHONY : robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/rule
+
+# Convenience name for target.
+_robots_generate_messages_check_deps_MoveRobot: robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/rule
+
+.PHONY : _robots_generate_messages_check_deps_MoveRobot
+
+# fast build rule for target.
+_robots_generate_messages_check_deps_MoveRobot/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/build.make robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/build
+.PHONY : _robots_generate_messages_check_deps_MoveRobot/fast
+
+# Convenience name for target.
 robots/CMakeFiles/robots_generate_messages.dir/rule:
 	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robots/CMakeFiles/robots_generate_messages.dir/rule
 .PHONY : robots/CMakeFiles/robots_generate_messages.dir/rule
@@ -271,6 +241,21 @@ robots_generate_messages: robots/CMakeFiles/robots_generate_messages.dir/rule
 robots_generate_messages/fast:
 	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f robots/CMakeFiles/robots_generate_messages.dir/build.make robots/CMakeFiles/robots_generate_messages.dir/build
 .PHONY : robots_generate_messages/fast
+
+# Convenience name for target.
+robots/CMakeFiles/_robots_generate_messages_check_deps_FinDeplacerPiece_Msg.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robots/CMakeFiles/_robots_generate_messages_check_deps_FinDeplacerPiece_Msg.dir/rule
+.PHONY : robots/CMakeFiles/_robots_generate_messages_check_deps_FinDeplacerPiece_Msg.dir/rule
+
+# Convenience name for target.
+_robots_generate_messages_check_deps_FinDeplacerPiece_Msg: robots/CMakeFiles/_robots_generate_messages_check_deps_FinDeplacerPiece_Msg.dir/rule
+
+.PHONY : _robots_generate_messages_check_deps_FinDeplacerPiece_Msg
+
+# fast build rule for target.
+_robots_generate_messages_check_deps_FinDeplacerPiece_Msg/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f robots/CMakeFiles/_robots_generate_messages_check_deps_FinDeplacerPiece_Msg.dir/build.make robots/CMakeFiles/_robots_generate_messages_check_deps_FinDeplacerPiece_Msg.dir/build
+.PHONY : _robots_generate_messages_check_deps_FinDeplacerPiece_Msg/fast
 
 # Convenience name for target.
 robots/CMakeFiles/robots_genpy.dir/rule:
@@ -288,19 +273,49 @@ robots_genpy/fast:
 .PHONY : robots_genpy/fast
 
 # Convenience name for target.
-robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/rule
-.PHONY : robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/rule
+robots/CMakeFiles/robot.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robots/CMakeFiles/robot.dir/rule
+.PHONY : robots/CMakeFiles/robot.dir/rule
 
 # Convenience name for target.
-_robots_generate_messages_check_deps_MoveRobot: robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/rule
+robot: robots/CMakeFiles/robot.dir/rule
 
-.PHONY : _robots_generate_messages_check_deps_MoveRobot
+.PHONY : robot
 
 # fast build rule for target.
-_robots_generate_messages_check_deps_MoveRobot/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/build.make robots/CMakeFiles/_robots_generate_messages_check_deps_MoveRobot.dir/build
-.PHONY : _robots_generate_messages_check_deps_MoveRobot/fast
+robot/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f robots/CMakeFiles/robot.dir/build.make robots/CMakeFiles/robot.dir/build
+.PHONY : robot/fast
+
+# Convenience name for target.
+robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/rule
+.PHONY : robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/rule
+
+# Convenience name for target.
+_robots_generate_messages_check_deps_Msg_numrobot: robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/rule
+
+.PHONY : _robots_generate_messages_check_deps_Msg_numrobot
+
+# fast build rule for target.
+_robots_generate_messages_check_deps_Msg_numrobot/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/build.make robots/CMakeFiles/_robots_generate_messages_check_deps_Msg_numrobot.dir/build
+.PHONY : _robots_generate_messages_check_deps_Msg_numrobot/fast
+
+# Convenience name for target.
+robots/CMakeFiles/robots_gennodejs.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robots/CMakeFiles/robots_gennodejs.dir/rule
+.PHONY : robots/CMakeFiles/robots_gennodejs.dir/rule
+
+# Convenience name for target.
+robots_gennodejs: robots/CMakeFiles/robots_gennodejs.dir/rule
+
+.PHONY : robots_gennodejs
+
+# fast build rule for target.
+robots_gennodejs/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f robots/CMakeFiles/robots_gennodejs.dir/build.make robots/CMakeFiles/robots_gennodejs.dir/build
+.PHONY : robots_gennodejs/fast
 
 # Convenience name for target.
 robots/CMakeFiles/robots_generate_messages_eus.dir/rule:
@@ -485,16 +500,17 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... robots_gennodejs"
-	@echo "... _robots_generate_messages_check_deps_Msg_numrobot"
-	@echo "... robot"
 	@echo "... robots_generate_messages_lisp"
 	@echo "... robots_generate_messages_cpp"
 	@echo "... _robots_generate_messages_check_deps_FaireTacheMsg"
-	@echo "... robots_generate_messages"
-	@echo "... robots_genpy"
 	@echo "... install"
 	@echo "... _robots_generate_messages_check_deps_MoveRobot"
+	@echo "... robots_generate_messages"
+	@echo "... _robots_generate_messages_check_deps_FinDeplacerPiece_Msg"
+	@echo "... robots_genpy"
+	@echo "... robot"
+	@echo "... _robots_generate_messages_check_deps_Msg_numrobot"
+	@echo "... robots_gennodejs"
 	@echo "... robots_generate_messages_eus"
 	@echo "... robots_generate_messages_nodejs"
 	@echo "... robots_geneus"

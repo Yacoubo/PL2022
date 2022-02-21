@@ -80,7 +80,12 @@ struct Retour_celluleResponse_
     , CP1(false)
     , CP2(false)
     , CP9(false)
-    , CP10(false)  {
+    , CP10(false)
+    , OUTR1(false)
+    , OUTR2(false)
+    , OUTR3(false)
+    , OUTR4(false)
+    , INR1(false)  {
     }
   Retour_celluleResponse_(const ContainerAllocator& _alloc)
     : ST1(false)
@@ -139,7 +144,12 @@ struct Retour_celluleResponse_
     , CP1(false)
     , CP2(false)
     , CP9(false)
-    , CP10(false)  {
+    , CP10(false)
+    , OUTR1(false)
+    , OUTR2(false)
+    , OUTR3(false)
+    , OUTR4(false)
+    , INR1(false)  {
   (void)_alloc;
     }
 
@@ -316,6 +326,21 @@ struct Retour_celluleResponse_
    typedef uint8_t _CP10_type;
   _CP10_type CP10;
 
+   typedef uint8_t _OUTR1_type;
+  _OUTR1_type OUTR1;
+
+   typedef uint8_t _OUTR2_type;
+  _OUTR2_type OUTR2;
+
+   typedef uint8_t _OUTR3_type;
+  _OUTR3_type OUTR3;
+
+   typedef uint8_t _OUTR4_type;
+  _OUTR4_type OUTR4;
+
+   typedef uint8_t _INR1_type;
+  _INR1_type INR1;
+
 
 
 
@@ -401,7 +426,12 @@ bool operator==(const ::schneider::Retour_celluleResponse_<ContainerAllocator1> 
     lhs.CP1 == rhs.CP1 &&
     lhs.CP2 == rhs.CP2 &&
     lhs.CP9 == rhs.CP9 &&
-    lhs.CP10 == rhs.CP10;
+    lhs.CP10 == rhs.CP10 &&
+    lhs.OUTR1 == rhs.OUTR1 &&
+    lhs.OUTR2 == rhs.OUTR2 &&
+    lhs.OUTR3 == rhs.OUTR3 &&
+    lhs.OUTR4 == rhs.OUTR4 &&
+    lhs.INR1 == rhs.INR1;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -458,12 +488,12 @@ struct MD5Sum< ::schneider::Retour_celluleResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "d28641961c36e4a329584c37028b3fa0";
+    return "383fcdcd810369913b6bf461f1c04058";
   }
 
   static const char* value(const ::schneider::Retour_celluleResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xd28641961c36e4a3ULL;
-  static const uint64_t static_value2 = 0x29584c37028b3fa0ULL;
+  static const uint64_t static_value1 = 0x383fcdcd81036991ULL;
+  static const uint64_t static_value2 = 0x3b6bf461f1c04058ULL;
 };
 
 template<class ContainerAllocator>
@@ -539,6 +569,11 @@ struct Definition< ::schneider::Retour_celluleResponse_<ContainerAllocator> >
 "bool CP2\n"
 "bool CP9\n"
 "bool CP10\n"
+"bool OUTR1\n"
+"bool OUTR2\n"
+"bool OUTR3\n"
+"bool OUTR4\n"
+"bool INR1\n"
 "\n"
 ;
   }
@@ -615,6 +650,11 @@ namespace serialization
       stream.next(m.CP2);
       stream.next(m.CP9);
       stream.next(m.CP10);
+      stream.next(m.OUTR1);
+      stream.next(m.OUTR2);
+      stream.next(m.OUTR3);
+      stream.next(m.OUTR4);
+      stream.next(m.INR1);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -747,6 +787,16 @@ struct Printer< ::schneider::Retour_celluleResponse_<ContainerAllocator> >
     Printer<uint8_t>::stream(s, indent + "  ", v.CP9);
     s << indent << "CP10: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.CP10);
+    s << indent << "OUTR1: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.OUTR1);
+    s << indent << "OUTR2: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.OUTR2);
+    s << indent << "OUTR3: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.OUTR3);
+    s << indent << "OUTR4: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.OUTR4);
+    s << indent << "INR1: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.INR1);
   }
 };
 
