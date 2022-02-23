@@ -80,6 +80,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -103,15 +113,16 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : list_install_components/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -123,17 +134,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,34 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-commande_locale/CMakeFiles/log_manager.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/log_manager.dir/rule
-.PHONY : commande_locale/CMakeFiles/log_manager.dir/rule
+commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_ChoixMode.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_ChoixMode.dir/rule
+.PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_ChoixMode.dir/rule
 
 # Convenience name for target.
-log_manager: commande_locale/CMakeFiles/log_manager.dir/rule
+_commande_locale_generate_messages_check_deps_Msg_ChoixMode: commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_ChoixMode.dir/rule
 
-.PHONY : log_manager
+.PHONY : _commande_locale_generate_messages_check_deps_Msg_ChoixMode
 
 # fast build rule for target.
-log_manager/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/log_manager.dir/build.make commande_locale/CMakeFiles/log_manager.dir/build
-.PHONY : log_manager/fast
-
-# Convenience name for target.
-commande_locale/CMakeFiles/display_node.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/display_node.dir/rule
-.PHONY : commande_locale/CMakeFiles/display_node.dir/rule
-
-# Convenience name for target.
-display_node: commande_locale/CMakeFiles/display_node.dir/rule
-
-.PHONY : display_node
-
-# fast build rule for target.
-display_node/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/display_node.dir/build.make commande_locale/CMakeFiles/display_node.dir/build
-.PHONY : display_node/fast
+_commande_locale_generate_messages_check_deps_Msg_ChoixMode/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_ChoixMode.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_ChoixMode.dir/build
+.PHONY : _commande_locale_generate_messages_check_deps_Msg_ChoixMode/fast
 
 # Convenience name for target.
 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_SwitchControl.dir/rule:
@@ -213,34 +198,19 @@ _commande_locale_generate_messages_check_deps_Msg_SwitchControl/fast:
 .PHONY : _commande_locale_generate_messages_check_deps_Msg_SwitchControl/fast
 
 # Convenience name for target.
-commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_ChoixMode.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_ChoixMode.dir/rule
-.PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_ChoixMode.dir/rule
+commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_DeplacerPieceMsg.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_DeplacerPieceMsg.dir/rule
+.PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_DeplacerPieceMsg.dir/rule
 
 # Convenience name for target.
-_commande_locale_generate_messages_check_deps_Msg_ChoixMode: commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_ChoixMode.dir/rule
+_commande_locale_generate_messages_check_deps_DeplacerPieceMsg: commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_DeplacerPieceMsg.dir/rule
 
-.PHONY : _commande_locale_generate_messages_check_deps_Msg_ChoixMode
+.PHONY : _commande_locale_generate_messages_check_deps_DeplacerPieceMsg
 
 # fast build rule for target.
-_commande_locale_generate_messages_check_deps_Msg_ChoixMode/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_ChoixMode.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_ChoixMode.dir/build
-.PHONY : _commande_locale_generate_messages_check_deps_Msg_ChoixMode/fast
-
-# Convenience name for target.
-commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_TacheFinieMsg.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_TacheFinieMsg.dir/rule
-.PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_TacheFinieMsg.dir/rule
-
-# Convenience name for target.
-_commande_locale_generate_messages_check_deps_TacheFinieMsg: commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_TacheFinieMsg.dir/rule
-
-.PHONY : _commande_locale_generate_messages_check_deps_TacheFinieMsg
-
-# fast build rule for target.
-_commande_locale_generate_messages_check_deps_TacheFinieMsg/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_TacheFinieMsg.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_TacheFinieMsg.dir/build
-.PHONY : _commande_locale_generate_messages_check_deps_TacheFinieMsg/fast
+_commande_locale_generate_messages_check_deps_DeplacerPieceMsg/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_DeplacerPieceMsg.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_DeplacerPieceMsg.dir/build
+.PHONY : _commande_locale_generate_messages_check_deps_DeplacerPieceMsg/fast
 
 # Convenience name for target.
 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_SrvFinInit.dir/rule:
@@ -258,6 +228,21 @@ _commande_locale_generate_messages_check_deps_SrvFinInit/fast:
 .PHONY : _commande_locale_generate_messages_check_deps_SrvFinInit/fast
 
 # Convenience name for target.
+commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_TacheFinieMsg.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_TacheFinieMsg.dir/rule
+.PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_TacheFinieMsg.dir/rule
+
+# Convenience name for target.
+_commande_locale_generate_messages_check_deps_TacheFinieMsg: commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_TacheFinieMsg.dir/rule
+
+.PHONY : _commande_locale_generate_messages_check_deps_TacheFinieMsg
+
+# fast build rule for target.
+_commande_locale_generate_messages_check_deps_TacheFinieMsg/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_TacheFinieMsg.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_TacheFinieMsg.dir/build
+.PHONY : _commande_locale_generate_messages_check_deps_TacheFinieMsg/fast
+
+# Convenience name for target.
 commande_locale/CMakeFiles/commande_locale_generate_messages_py.dir/rule:
 	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/commande_locale_generate_messages_py.dir/rule
 .PHONY : commande_locale/CMakeFiles/commande_locale_generate_messages_py.dir/rule
@@ -273,141 +258,6 @@ commande_locale_generate_messages_py/fast:
 .PHONY : commande_locale_generate_messages_py/fast
 
 # Convenience name for target.
-commande_locale/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : commande_locale/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: commande_locale/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make commande_locale/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Color.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Color.dir/rule
-.PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Color.dir/rule
-
-# Convenience name for target.
-_commande_locale_generate_messages_check_deps_Msg_Color: commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Color.dir/rule
-
-.PHONY : _commande_locale_generate_messages_check_deps_Msg_Color
-
-# fast build rule for target.
-_commande_locale_generate_messages_check_deps_Msg_Color/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Color.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Color.dir/build
-.PHONY : _commande_locale_generate_messages_check_deps_Msg_Color/fast
-
-# Convenience name for target.
-commande_locale/CMakeFiles/commande_locale_generate_messages_nodejs.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/commande_locale_generate_messages_nodejs.dir/rule
-.PHONY : commande_locale/CMakeFiles/commande_locale_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-commande_locale_generate_messages_nodejs: commande_locale/CMakeFiles/commande_locale_generate_messages_nodejs.dir/rule
-
-.PHONY : commande_locale_generate_messages_nodejs
-
-# fast build rule for target.
-commande_locale_generate_messages_nodejs/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/commande_locale_generate_messages_nodejs.dir/build.make commande_locale/CMakeFiles/commande_locale_generate_messages_nodejs.dir/build
-.PHONY : commande_locale_generate_messages_nodejs/fast
-
-# Convenience name for target.
-commande_locale/CMakeFiles/commande_locale_generate_messages_cpp.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/commande_locale_generate_messages_cpp.dir/rule
-.PHONY : commande_locale/CMakeFiles/commande_locale_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-commande_locale_generate_messages_cpp: commande_locale/CMakeFiles/commande_locale_generate_messages_cpp.dir/rule
-
-.PHONY : commande_locale_generate_messages_cpp
-
-# fast build rule for target.
-commande_locale_generate_messages_cpp/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/commande_locale_generate_messages_cpp.dir/build.make commande_locale/CMakeFiles/commande_locale_generate_messages_cpp.dir/build
-.PHONY : commande_locale_generate_messages_cpp/fast
-
-# Convenience name for target.
-commande_locale/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : commande_locale/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: commande_locale/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make commande_locale/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-commande_locale/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : commande_locale/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_eus: commande_locale/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_eus
-
-# fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make commande_locale/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-commande_locale/CMakeFiles/commande_locale_generate_messages.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/commande_locale_generate_messages.dir/rule
-.PHONY : commande_locale/CMakeFiles/commande_locale_generate_messages.dir/rule
-
-# Convenience name for target.
-commande_locale_generate_messages: commande_locale/CMakeFiles/commande_locale_generate_messages.dir/rule
-
-.PHONY : commande_locale_generate_messages
-
-# fast build rule for target.
-commande_locale_generate_messages/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/commande_locale_generate_messages.dir/build.make commande_locale/CMakeFiles/commande_locale_generate_messages.dir/build
-.PHONY : commande_locale_generate_messages/fast
-
-# Convenience name for target.
-commande_locale/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : commande_locale/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: commande_locale/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make commande_locale/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-commande_locale/CMakeFiles/commande_locale_geneus.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/commande_locale_geneus.dir/rule
-.PHONY : commande_locale/CMakeFiles/commande_locale_geneus.dir/rule
-
-# Convenience name for target.
-commande_locale_geneus: commande_locale/CMakeFiles/commande_locale_geneus.dir/rule
-
-.PHONY : commande_locale_geneus
-
-# fast build rule for target.
-commande_locale_geneus/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/commande_locale_geneus.dir/build.make commande_locale/CMakeFiles/commande_locale_geneus.dir/build
-.PHONY : commande_locale_geneus/fast
-
-# Convenience name for target.
 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Actionneurs.dir/rule:
 	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Actionneurs.dir/rule
 .PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Actionneurs.dir/rule
@@ -421,6 +271,21 @@ _commande_locale_generate_messages_check_deps_Actionneurs: commande_locale/CMake
 _commande_locale_generate_messages_check_deps_Actionneurs/fast:
 	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Actionneurs.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Actionneurs.dir/build
 .PHONY : _commande_locale_generate_messages_check_deps_Actionneurs/fast
+
+# Convenience name for target.
+commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Erreur.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Erreur.dir/rule
+.PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Erreur.dir/rule
+
+# Convenience name for target.
+_commande_locale_generate_messages_check_deps_Msg_Erreur: commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Erreur.dir/rule
+
+.PHONY : _commande_locale_generate_messages_check_deps_Msg_Erreur
+
+# fast build rule for target.
+_commande_locale_generate_messages_check_deps_Msg_Erreur/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Erreur.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Erreur.dir/build
+.PHONY : _commande_locale_generate_messages_check_deps_Msg_Erreur/fast
 
 # Convenience name for target.
 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Capteurs.dir/rule:
@@ -483,79 +348,34 @@ _commande_locale_generate_messages_check_deps_RobotJoints/fast:
 .PHONY : _commande_locale_generate_messages_check_deps_RobotJoints/fast
 
 # Convenience name for target.
-commande_locale/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : commande_locale/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+commande_locale/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : commande_locale/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_cpp: commande_locale/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+sensor_msgs_generate_messages_cpp: commande_locale/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_cpp
 
 # fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make commande_locale/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
+sensor_msgs_generate_messages_cpp/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make commande_locale/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-commande_locale/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : commande_locale/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+commande_locale/CMakeFiles/commande_locale_geneus.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/commande_locale_geneus.dir/rule
+.PHONY : commande_locale/CMakeFiles/commande_locale_geneus.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_lisp: commande_locale/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+commande_locale_geneus: commande_locale/CMakeFiles/commande_locale_geneus.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_lisp
+.PHONY : commande_locale_geneus
 
 # fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make commande_locale/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-commande_locale/CMakeFiles/commande_locale_generate_messages_eus.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/commande_locale_generate_messages_eus.dir/rule
-.PHONY : commande_locale/CMakeFiles/commande_locale_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-commande_locale_generate_messages_eus: commande_locale/CMakeFiles/commande_locale_generate_messages_eus.dir/rule
-
-.PHONY : commande_locale_generate_messages_eus
-
-# fast build rule for target.
-commande_locale_generate_messages_eus/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/commande_locale_generate_messages_eus.dir/build.make commande_locale/CMakeFiles/commande_locale_generate_messages_eus.dir/build
-.PHONY : commande_locale_generate_messages_eus/fast
-
-# Convenience name for target.
-commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_AddProduct.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_AddProduct.dir/rule
-.PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_AddProduct.dir/rule
-
-# Convenience name for target.
-_commande_locale_generate_messages_check_deps_Msg_AddProduct: commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_AddProduct.dir/rule
-
-.PHONY : _commande_locale_generate_messages_check_deps_Msg_AddProduct
-
-# fast build rule for target.
-_commande_locale_generate_messages_check_deps_Msg_AddProduct/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_AddProduct.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_AddProduct.dir/build
-.PHONY : _commande_locale_generate_messages_check_deps_Msg_AddProduct/fast
-
-# Convenience name for target.
-commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Erreur.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Erreur.dir/rule
-.PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Erreur.dir/rule
-
-# Convenience name for target.
-_commande_locale_generate_messages_check_deps_Msg_Erreur: commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Erreur.dir/rule
-
-.PHONY : _commande_locale_generate_messages_check_deps_Msg_Erreur
-
-# fast build rule for target.
-_commande_locale_generate_messages_check_deps_Msg_Erreur/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Erreur.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Erreur.dir/build
-.PHONY : _commande_locale_generate_messages_check_deps_Msg_Erreur/fast
+commande_locale_geneus/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/commande_locale_geneus.dir/build.make commande_locale/CMakeFiles/commande_locale_geneus.dir/build
+.PHONY : commande_locale_geneus/fast
 
 # Convenience name for target.
 commande_locale/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
@@ -588,19 +408,64 @@ _commande_locale_generate_messages_check_deps_Msg_PinControl/fast:
 .PHONY : _commande_locale_generate_messages_check_deps_Msg_PinControl/fast
 
 # Convenience name for target.
-commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_DeplacerPieceMsg.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_DeplacerPieceMsg.dir/rule
-.PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_DeplacerPieceMsg.dir/rule
+commande_locale/CMakeFiles/commande_locale_generate_messages.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/commande_locale_generate_messages.dir/rule
+.PHONY : commande_locale/CMakeFiles/commande_locale_generate_messages.dir/rule
 
 # Convenience name for target.
-_commande_locale_generate_messages_check_deps_DeplacerPieceMsg: commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_DeplacerPieceMsg.dir/rule
+commande_locale_generate_messages: commande_locale/CMakeFiles/commande_locale_generate_messages.dir/rule
 
-.PHONY : _commande_locale_generate_messages_check_deps_DeplacerPieceMsg
+.PHONY : commande_locale_generate_messages
 
 # fast build rule for target.
-_commande_locale_generate_messages_check_deps_DeplacerPieceMsg/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_DeplacerPieceMsg.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_DeplacerPieceMsg.dir/build
-.PHONY : _commande_locale_generate_messages_check_deps_DeplacerPieceMsg/fast
+commande_locale_generate_messages/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/commande_locale_generate_messages.dir/build.make commande_locale/CMakeFiles/commande_locale_generate_messages.dir/build
+.PHONY : commande_locale_generate_messages/fast
+
+# Convenience name for target.
+commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Color.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Color.dir/rule
+.PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Color.dir/rule
+
+# Convenience name for target.
+_commande_locale_generate_messages_check_deps_Msg_Color: commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Color.dir/rule
+
+.PHONY : _commande_locale_generate_messages_check_deps_Msg_Color
+
+# fast build rule for target.
+_commande_locale_generate_messages_check_deps_Msg_Color/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Color.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_Color.dir/build
+.PHONY : _commande_locale_generate_messages_check_deps_Msg_Color/fast
+
+# Convenience name for target.
+commande_locale/CMakeFiles/commande_locale_generate_messages_nodejs.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/commande_locale_generate_messages_nodejs.dir/rule
+.PHONY : commande_locale/CMakeFiles/commande_locale_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+commande_locale_generate_messages_nodejs: commande_locale/CMakeFiles/commande_locale_generate_messages_nodejs.dir/rule
+
+.PHONY : commande_locale_generate_messages_nodejs
+
+# fast build rule for target.
+commande_locale_generate_messages_nodejs/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/commande_locale_generate_messages_nodejs.dir/build.make commande_locale/CMakeFiles/commande_locale_generate_messages_nodejs.dir/build
+.PHONY : commande_locale_generate_messages_nodejs/fast
+
+# Convenience name for target.
+commande_locale/CMakeFiles/commande_locale_generate_messages_cpp.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/commande_locale_generate_messages_cpp.dir/rule
+.PHONY : commande_locale/CMakeFiles/commande_locale_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+commande_locale_generate_messages_cpp: commande_locale/CMakeFiles/commande_locale_generate_messages_cpp.dir/rule
+
+.PHONY : commande_locale_generate_messages_cpp
+
+# fast build rule for target.
+commande_locale_generate_messages_cpp/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/commande_locale_generate_messages_cpp.dir/build.make commande_locale/CMakeFiles/commande_locale_generate_messages_cpp.dir/build
+.PHONY : commande_locale_generate_messages_cpp/fast
 
 # Convenience name for target.
 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_SrvAddProductPushBack.dir/rule:
@@ -618,49 +483,64 @@ _commande_locale_generate_messages_check_deps_SrvAddProductPushBack/fast:
 .PHONY : _commande_locale_generate_messages_check_deps_SrvAddProductPushBack/fast
 
 # Convenience name for target.
-commande_locale/CMakeFiles/simulation.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/simulation.dir/rule
-.PHONY : commande_locale/CMakeFiles/simulation.dir/rule
+commande_locale/CMakeFiles/display_node.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/display_node.dir/rule
+.PHONY : commande_locale/CMakeFiles/display_node.dir/rule
 
 # Convenience name for target.
-simulation: commande_locale/CMakeFiles/simulation.dir/rule
+display_node: commande_locale/CMakeFiles/display_node.dir/rule
 
-.PHONY : simulation
+.PHONY : display_node
 
 # fast build rule for target.
-simulation/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/simulation.dir/build.make commande_locale/CMakeFiles/simulation.dir/build
-.PHONY : simulation/fast
+display_node/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/display_node.dir/build.make commande_locale/CMakeFiles/display_node.dir/build
+.PHONY : display_node/fast
 
 # Convenience name for target.
-commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_StopControl.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_StopControl.dir/rule
-.PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_StopControl.dir/rule
+commande_locale/CMakeFiles/log_manager.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/log_manager.dir/rule
+.PHONY : commande_locale/CMakeFiles/log_manager.dir/rule
 
 # Convenience name for target.
-_commande_locale_generate_messages_check_deps_Msg_StopControl: commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_StopControl.dir/rule
+log_manager: commande_locale/CMakeFiles/log_manager.dir/rule
 
-.PHONY : _commande_locale_generate_messages_check_deps_Msg_StopControl
+.PHONY : log_manager
 
 # fast build rule for target.
-_commande_locale_generate_messages_check_deps_Msg_StopControl/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_StopControl.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_StopControl.dir/build
-.PHONY : _commande_locale_generate_messages_check_deps_Msg_StopControl/fast
+log_manager/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/log_manager.dir/build.make commande_locale/CMakeFiles/log_manager.dir/build
+.PHONY : log_manager/fast
 
 # Convenience name for target.
-commande_locale/CMakeFiles/commande_locale_gencpp.dir/rule:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/commande_locale_gencpp.dir/rule
-.PHONY : commande_locale/CMakeFiles/commande_locale_gencpp.dir/rule
+commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_AddProduct.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_AddProduct.dir/rule
+.PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_AddProduct.dir/rule
 
 # Convenience name for target.
-commande_locale_gencpp: commande_locale/CMakeFiles/commande_locale_gencpp.dir/rule
+_commande_locale_generate_messages_check_deps_Msg_AddProduct: commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_AddProduct.dir/rule
 
-.PHONY : commande_locale_gencpp
+.PHONY : _commande_locale_generate_messages_check_deps_Msg_AddProduct
 
 # fast build rule for target.
-commande_locale_gencpp/fast:
-	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/commande_locale_gencpp.dir/build.make commande_locale/CMakeFiles/commande_locale_gencpp.dir/build
-.PHONY : commande_locale_gencpp/fast
+_commande_locale_generate_messages_check_deps_Msg_AddProduct/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_AddProduct.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_AddProduct.dir/build
+.PHONY : _commande_locale_generate_messages_check_deps_Msg_AddProduct/fast
+
+# Convenience name for target.
+commande_locale/CMakeFiles/commande_locale_generate_messages_eus.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/commande_locale_generate_messages_eus.dir/rule
+.PHONY : commande_locale/CMakeFiles/commande_locale_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+commande_locale_generate_messages_eus: commande_locale/CMakeFiles/commande_locale_generate_messages_eus.dir/rule
+
+.PHONY : commande_locale_generate_messages_eus
+
+# fast build rule for target.
+commande_locale_generate_messages_eus/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/commande_locale_generate_messages_eus.dir/build.make commande_locale/CMakeFiles/commande_locale_generate_messages_eus.dir/build
+.PHONY : commande_locale_generate_messages_eus/fast
 
 # Convenience name for target.
 commande_locale/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
@@ -751,6 +631,51 @@ commande_locale_genpy: commande_locale/CMakeFiles/commande_locale_genpy.dir/rule
 commande_locale_genpy/fast:
 	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/commande_locale_genpy.dir/build.make commande_locale/CMakeFiles/commande_locale_genpy.dir/build
 .PHONY : commande_locale_genpy/fast
+
+# Convenience name for target.
+commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_StopControl.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_StopControl.dir/rule
+.PHONY : commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_StopControl.dir/rule
+
+# Convenience name for target.
+_commande_locale_generate_messages_check_deps_Msg_StopControl: commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_StopControl.dir/rule
+
+.PHONY : _commande_locale_generate_messages_check_deps_Msg_StopControl
+
+# fast build rule for target.
+_commande_locale_generate_messages_check_deps_Msg_StopControl/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_StopControl.dir/build.make commande_locale/CMakeFiles/_commande_locale_generate_messages_check_deps_Msg_StopControl.dir/build
+.PHONY : _commande_locale_generate_messages_check_deps_Msg_StopControl/fast
+
+# Convenience name for target.
+commande_locale/CMakeFiles/commande_locale_gencpp.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/commande_locale_gencpp.dir/rule
+.PHONY : commande_locale/CMakeFiles/commande_locale_gencpp.dir/rule
+
+# Convenience name for target.
+commande_locale_gencpp: commande_locale/CMakeFiles/commande_locale_gencpp.dir/rule
+
+.PHONY : commande_locale_gencpp
+
+# fast build rule for target.
+commande_locale_gencpp/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/commande_locale_gencpp.dir/build.make commande_locale/CMakeFiles/commande_locale_gencpp.dir/build
+.PHONY : commande_locale_gencpp/fast
+
+# Convenience name for target.
+commande_locale/CMakeFiles/simulation.dir/rule:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 commande_locale/CMakeFiles/simulation.dir/rule
+.PHONY : commande_locale/CMakeFiles/simulation.dir/rule
+
+# Convenience name for target.
+simulation: commande_locale/CMakeFiles/simulation.dir/rule
+
+.PHONY : simulation
+
+# fast build rule for target.
+simulation/fast:
+	cd /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build && $(MAKE) -f commande_locale/CMakeFiles/simulation.dir/build.make commande_locale/CMakeFiles/simulation.dir/build
+.PHONY : simulation/fast
 
 src/LogManager.o: src/LogManager.cpp.o
 
@@ -895,43 +820,34 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install"
-	@echo "... test"
-	@echo "... log_manager"
-	@echo "... display_node"
-	@echo "... _commande_locale_generate_messages_check_deps_Msg_SwitchControl"
 	@echo "... _commande_locale_generate_messages_check_deps_Msg_ChoixMode"
-	@echo "... _commande_locale_generate_messages_check_deps_TacheFinieMsg"
+	@echo "... _commande_locale_generate_messages_check_deps_Msg_SwitchControl"
+	@echo "... list_install_components"
+	@echo "... _commande_locale_generate_messages_check_deps_DeplacerPieceMsg"
 	@echo "... _commande_locale_generate_messages_check_deps_SrvFinInit"
+	@echo "... _commande_locale_generate_messages_check_deps_TacheFinieMsg"
 	@echo "... commande_locale_generate_messages_py"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... _commande_locale_generate_messages_check_deps_Msg_Color"
-	@echo "... commande_locale_generate_messages_nodejs"
-	@echo "... commande_locale_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... commande_locale_generate_messages"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... commande_locale_geneus"
 	@echo "... _commande_locale_generate_messages_check_deps_Actionneurs"
+	@echo "... _commande_locale_generate_messages_check_deps_Msg_Erreur"
+	@echo "... test"
 	@echo "... _commande_locale_generate_messages_check_deps_Capteurs"
 	@echo "... install/local"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... _commande_locale_generate_messages_check_deps_SrvAddProduct"
 	@echo "... _commande_locale_generate_messages_check_deps_RobotJoints"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... commande_locale_generate_messages_eus"
-	@echo "... _commande_locale_generate_messages_check_deps_Msg_AddProduct"
-	@echo "... _commande_locale_generate_messages_check_deps_Msg_Erreur"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... commande_locale_geneus"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... _commande_locale_generate_messages_check_deps_Msg_PinControl"
-	@echo "... list_install_components"
-	@echo "... _commande_locale_generate_messages_check_deps_DeplacerPieceMsg"
+	@echo "... commande_locale_generate_messages"
+	@echo "... _commande_locale_generate_messages_check_deps_Msg_Color"
+	@echo "... commande_locale_generate_messages_nodejs"
+	@echo "... commande_locale_generate_messages_cpp"
 	@echo "... _commande_locale_generate_messages_check_deps_SrvAddProductPushBack"
-	@echo "... edit_cache"
-	@echo "... simulation"
-	@echo "... _commande_locale_generate_messages_check_deps_Msg_StopControl"
-	@echo "... commande_locale_gencpp"
+	@echo "... display_node"
+	@echo "... log_manager"
+	@echo "... _commande_locale_generate_messages_check_deps_Msg_AddProduct"
+	@echo "... commande_locale_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... commande_locale_generate_messages_lisp"
 	@echo "... commande_locale_genlisp"
@@ -939,6 +855,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... commande_locale_genpy"
+	@echo "... _commande_locale_generate_messages_check_deps_Msg_StopControl"
+	@echo "... commande_locale_gencpp"
+	@echo "... edit_cache"
+	@echo "... simulation"
 	@echo "... src/LogManager.o"
 	@echo "... src/LogManager.i"
 	@echo "... src/LogManager.s"

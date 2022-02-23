@@ -60,10 +60,13 @@ echo "--------------------------------------------------------------${normal}"
     # Launch of the other nodes
 	echo "Launching the other nodes " 
 	#roslaunch launcher launch_beta.launch 
+    
     sleep 10
     roslaunch schneider roslaunch_cellule.launch & 
     sleep 10
     roslaunch schneider_104 roslaunch_cellule_104.launch & 
     sleep 10
     roslaunch schneider_103 roslaunch_cellule_103.launch & 
+    sleep 10
+    roslaunch motoman_hc10_moveit_config moveit_planning_execution.launch 
 fi

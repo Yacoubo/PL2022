@@ -8,14 +8,15 @@ import struct
 
 
 class Msg_ChoixMode(genpy.Message):
-  _md5sum = "ff63f6ea3c3e9b7504b2cb3ee0a09d92"
+  _md5sum = "8deffc0cc086c0947202ed43a2d0220b"
   _type = "commande_locale/Msg_ChoixMode"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """int32 mode
+int32 yaska
 
 """
-  __slots__ = ['mode']
-  _slot_types = ['int32']
+  __slots__ = ['mode','yaska']
+  _slot_types = ['int32','int32']
 
   def __init__(self, *args, **kwds):
     """
@@ -25,7 +26,7 @@ class Msg_ChoixMode(genpy.Message):
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       mode
+       mode,yaska
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -36,8 +37,11 @@ class Msg_ChoixMode(genpy.Message):
       # message fields cannot be None, assign default values for those that are
       if self.mode is None:
         self.mode = 0
+      if self.yaska is None:
+        self.yaska = 0
     else:
       self.mode = 0
+      self.yaska = 0
 
   def _get_types(self):
     """
@@ -51,8 +55,8 @@ class Msg_ChoixMode(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.mode
-      buff.write(_get_struct_i().pack(_x))
+      _x = self
+      buff.write(_get_struct_2i().pack(_x.mode, _x.yaska))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -61,12 +65,14 @@ class Msg_ChoixMode(genpy.Message):
     unpack serialized message in str into this message instance
     :param str: byte array of serialized message, ``str``
     """
-    codecs.lookup_error("rosmsg").msg_type = self._type
+    if python3:
+      codecs.lookup_error("rosmsg").msg_type = self._type
     try:
       end = 0
+      _x = self
       start = end
-      end += 4
-      (self.mode,) = _get_struct_i().unpack(str[start:end])
+      end += 8
+      (_x.mode, _x.yaska,) = _get_struct_2i().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -79,8 +85,8 @@ class Msg_ChoixMode(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      _x = self.mode
-      buff.write(_get_struct_i().pack(_x))
+      _x = self
+      buff.write(_get_struct_2i().pack(_x.mode, _x.yaska))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -90,12 +96,14 @@ class Msg_ChoixMode(genpy.Message):
     :param str: byte array of serialized message, ``str``
     :param numpy: numpy python module
     """
-    codecs.lookup_error("rosmsg").msg_type = self._type
+    if python3:
+      codecs.lookup_error("rosmsg").msg_type = self._type
     try:
       end = 0
+      _x = self
       start = end
-      end += 4
-      (self.mode,) = _get_struct_i().unpack(str[start:end])
+      end += 8
+      (_x.mode, _x.yaska,) = _get_struct_2i().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -104,9 +112,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_i = None
-def _get_struct_i():
-    global _struct_i
-    if _struct_i is None:
-        _struct_i = struct.Struct("<i")
-    return _struct_i
+_struct_2i = None
+def _get_struct_2i():
+    global _struct_2i
+    if _struct_2i is None:
+        _struct_2i = struct.Struct("<2i")
+    return _struct_2i

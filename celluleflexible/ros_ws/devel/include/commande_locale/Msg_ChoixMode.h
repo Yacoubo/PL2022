@@ -24,10 +24,12 @@ struct Msg_ChoixMode_
   typedef Msg_ChoixMode_<ContainerAllocator> Type;
 
   Msg_ChoixMode_()
-    : mode(0)  {
+    : mode(0)
+    , yaska(0)  {
     }
   Msg_ChoixMode_(const ContainerAllocator& _alloc)
-    : mode(0)  {
+    : mode(0)
+    , yaska(0)  {
   (void)_alloc;
     }
 
@@ -35,6 +37,9 @@ struct Msg_ChoixMode_
 
    typedef int32_t _mode_type;
   _mode_type mode;
+
+   typedef int32_t _yaska_type;
+  _yaska_type yaska;
 
 
 
@@ -65,7 +70,8 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::commande_locale::Msg_ChoixMode_<ContainerAllocator1> & lhs, const ::commande_locale::Msg_ChoixMode_<ContainerAllocator2> & rhs)
 {
-  return lhs.mode == rhs.mode;
+  return lhs.mode == rhs.mode &&
+    lhs.yaska == rhs.yaska;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -122,12 +128,12 @@ struct MD5Sum< ::commande_locale::Msg_ChoixMode_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "ff63f6ea3c3e9b7504b2cb3ee0a09d92";
+    return "8deffc0cc086c0947202ed43a2d0220b";
   }
 
   static const char* value(const ::commande_locale::Msg_ChoixMode_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xff63f6ea3c3e9b75ULL;
-  static const uint64_t static_value2 = 0x04b2cb3ee0a09d92ULL;
+  static const uint64_t static_value1 = 0x8deffc0cc086c094ULL;
+  static const uint64_t static_value2 = 0x7202ed43a2d0220bULL;
 };
 
 template<class ContainerAllocator>
@@ -147,6 +153,7 @@ struct Definition< ::commande_locale::Msg_ChoixMode_<ContainerAllocator> >
   static const char* value()
   {
     return "int32 mode\n"
+"int32 yaska\n"
 "\n"
 ;
   }
@@ -167,6 +174,7 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.mode);
+      stream.next(m.yaska);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -187,6 +195,8 @@ struct Printer< ::commande_locale::Msg_ChoixMode_<ContainerAllocator> >
   {
     s << indent << "mode: ";
     Printer<int32_t>::stream(s, indent + "  ", v.mode);
+    s << indent << "yaska: ";
+    Printer<int32_t>::stream(s, indent + "  ", v.yaska);
   }
 };
 

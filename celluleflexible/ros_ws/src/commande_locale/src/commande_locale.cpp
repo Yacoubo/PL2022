@@ -128,6 +128,7 @@ int main(int argc, char **argv)
 	int choixProduit=0;
 	int choixPoste=0;
 	int choixMode=0;
+	int choixYaska =0;
 	while(ros::ok())
 	{
 		cout << endl << endl << endl;
@@ -208,7 +209,11 @@ int main(int argc, char **argv)
 				case 5:
 					cout << "Mode : Simu (0) ou Atelier (1)?"<<endl;
 					cin >> choixMode;
-					if(cin.fail() || choixMode<0 || choixMode>1)
+					if (choixMode==0){
+						cout << "Yaskawa : Coppelia (0) ou Rviz (1)?"<<endl;
+						cin >> choixYaska;
+					}
+					if(cin.fail() || choixMode<0 || choixMode>1 || choixYaska<0 || choixYaska>1)
 					{
 						cout << endl << " [Erreur mauvais choix ..]" << endl;
 						cin.clear();
@@ -216,6 +221,7 @@ int main(int argc, char **argv)
 						break;
 					}
 					msg1.mode = choixMode;
+					msg1.yaska = choixYaska;
 					pubModeType.publish(msg1);
 					break;
 				default:

@@ -19,6 +19,7 @@ class Msg_ChoixMode {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.mode = null;
+      this.yaska = null;
     }
     else {
       if (initObj.hasOwnProperty('mode')) {
@@ -27,6 +28,12 @@ class Msg_ChoixMode {
       else {
         this.mode = 0;
       }
+      if (initObj.hasOwnProperty('yaska')) {
+        this.yaska = initObj.yaska
+      }
+      else {
+        this.yaska = 0;
+      }
     }
   }
 
@@ -34,6 +41,8 @@ class Msg_ChoixMode {
     // Serializes a message object of type Msg_ChoixMode
     // Serialize message field [mode]
     bufferOffset = _serializer.int32(obj.mode, buffer, bufferOffset);
+    // Serialize message field [yaska]
+    bufferOffset = _serializer.int32(obj.yaska, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -43,11 +52,13 @@ class Msg_ChoixMode {
     let data = new Msg_ChoixMode(null);
     // Deserialize message field [mode]
     data.mode = _deserializer.int32(buffer, bufferOffset);
+    // Deserialize message field [yaska]
+    data.yaska = _deserializer.int32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 4;
+    return 8;
   }
 
   static datatype() {
@@ -57,13 +68,14 @@ class Msg_ChoixMode {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'ff63f6ea3c3e9b7504b2cb3ee0a09d92';
+    return '8deffc0cc086c0947202ed43a2d0220b';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     int32 mode
+    int32 yaska
     
     
     `;
@@ -80,6 +92,13 @@ class Msg_ChoixMode {
     }
     else {
       resolved.mode = 0
+    }
+
+    if (msg.yaska !== undefined) {
+      resolved.yaska = msg.yaska;
+    }
+    else {
+      resolved.yaska = 0
     }
 
     return resolved;

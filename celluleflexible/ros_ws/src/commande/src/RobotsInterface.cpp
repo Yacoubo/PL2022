@@ -67,6 +67,7 @@ RobotsInterface::~RobotsInterface()
 void RobotsInterface::TypeMode(const commande_locale::Msg_ChoixMode::ConstPtr& msg1)
 {
 	mode = msg1->mode;
+	yaskaType =msg1->yaska;
 
 }
 
@@ -367,27 +368,46 @@ int RobotsInterface::TacheFinie(int num_poste)
 }
 
 void RobotsInterface::VerifFinDeplacerPiece(const robots::FinDeplacerPiece_Msg::ConstPtr& msg2){
-	FinTacheAtelier = msg2->FinDeplacerR1;
+	FinTacheAtelierR1 = msg2->FinDeplacerR1;
+	FinTacheAtelierR4 = msg2->FinDeplacerR4;
 }
 
 int RobotsInterface::FinDeplacerPiece(int numRobot)
 {
+	
 	if(mode==0){
 		int Etat;
-		if(numRobot<1 || numRobot>nbRobot)
-		{
-			cout <<  BOLDMAGENTA << "Le numero du robot doit etre compris entre 1 et " << nbRobot << "." << RESET << endl;
-			return 1;
-		}
-		else
-			Etat=robotMacroDeplacement[numRobot-1];
+		cout << "yaska type"<<yaskaType<<endl;
+		if (yaskaType==1){
+			if (numRobot==4){
+				return FinTacheAtelierR4;
+			}
+			else{
+				Etat=robotMacroDeplacement[numRobot-1];
 
-		return Etat;
+			return Etat;
+			}
+		}
+		else{
+			if(numRobot<1 || numRobot>nbRobot)
+			{
+				cout <<  BOLDMAGENTA << "Le numero du robot doit etre compris entre 1 et " << nbRobot << "." << RESET << endl;
+				return 1;
+			}
+			else{
+				Etat=robotMacroDeplacement[numRobot-1];
+
+			return Etat;
+			}
+		}
 	}
 	else if (mode==1)
 	{
 		if (numRobot==1){
-			return FinTacheAtelier;
+			return FinTacheAtelierR1;
+		}
+		if (numRobot==4){
+			return FinTacheAtelierR4;
 		}
 	}
 }
@@ -398,6 +418,7 @@ void RobotsInterface::DeplacerPiece(int num_robot, int positionA, int positionB)
 {
 	if(num_robot>=1 && num_robot<=nbRobot)
 	{
+		
 		if ((positionA<5 && positionA>0)&&(positionB<5 && positionB>0))
 		{
 			robotMacroDeplacement[num_robot-1]=0;

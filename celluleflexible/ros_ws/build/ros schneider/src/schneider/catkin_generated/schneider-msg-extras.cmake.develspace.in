@@ -1,2 +1,0 @@
-set(schneider_MESSAGE_FILES "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/ros schneider/src/schneider/msg/Control_cellule.msg")
-set(schneider_SERVICE_FILES "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/ros schneider/src/schneider/srv/Retour_cellule.srv")
