@@ -22,9 +22,9 @@ function showHelp(){
     echo 
     echo "  To run it from command line use:"
     echo "     $ ./launch.sh [arg]"
-    echo "  different arguments : -h : help, -atelier : launch with the automates   "
-    echo " 			  -atelier : launch with the automates onto the montrac cell  "
-    echo "  			  -simYaska : simulation with yaskawa robot simulated  "
+    echo "  different options : -h : help, -atelier : launch with the automates   "
+    echo " 			              -m : mode simulated or physical  "
+    echo "  			          -r : choice for Yaskawa robot "
     echo
     echo "  By default, the coppelia simulation is always running"
     echo "  On commande_locale xterm you will have to put the same arguments"
@@ -44,31 +44,67 @@ if [ "$1" = "-h" ]; then
     showHelp
 else 
 
-echo "            Launching the 'commande locale' node "
-echo "${bold}--------------------------------------------------------------"
-   	echo "        The simulation file was not defined."
-	echo "      Default file Simulation4Robots.ttt will be used."
-	roslaunch launcher launch_alpha.launch nbRobot:="4" & 
-echo "--------------------------------------------------------------${normal}"
+    if [ "$1" != "" ] && [ "$2" = "" ]; then
+        echo 
+        echo "                error during launching                   " 
+        echo "  Please enter options properly (see help with -h)      "
+        echo 
+        exit 0
+    fi
+    echo 
+    echo "            Launching the 'commande locale' node "
+    echo "${bold}--------------------------------------------------------------"
+    echo "        The simulation file was not defined."
+    echo "      Default file Simulation4Robots.ttt will be used."
+    roslaunch launcher launch_alpha.launch nbRobot:="4" & 
+    echo "--------------------------------------------------------------${normal}"
+    echo 
 
-    # Wait... (10 seconds)
+    if [ "$1" = "-m" ]; then
 
-    # Launch of the other nodes
-echo "Launching the other nodes " 
-	#roslaunch launcher launch_beta.launch 
-   if [ "$1" = "-atelier" ]; then
-	    sleep 10
-	    roslaunch schneider roslaunch_cellule.launch & 
-	    sleep 10
-	    roslaunch schneider_104 roslaunch_cellule_104.launch & 
-	    sleep 10
-	    roslaunch schneider_103 roslaunch_cellule_103.launch & 
-	    #sleep 10
-	    #roslaunch motoman_hc10_moveit_config moveit_planning_execution.launch sim:=false robot_ip:=192.168.0.113 controller:=yrc1000
-   elif [ "$1" = "-simYaska" ]; then
-	    sleep 10
-	    roslaunch motoman_hc10_moveit_config moveit_planning_execution.launch 
-   fi
+        if [ "$2" = "simulation" ]; then
+            echo 
+            echo "     Launching the simulated nodes      " 
+            echo 
+            #nothing to do.
+
+        
+        elif [ "$2" = "atelier" ]; then
+            echo 
+            echo "     Launching the automate nodes      " 
+            echo 
+            sleep 10
+            roslaunch schneider roslaunch_cellule.launch & 
+            sleep 10
+            roslaunch schneider_104 roslaunch_cellule_104.launch & 
+            sleep 10
+            roslaunch schneider_103 roslaunch_cellule_103.launch &
+    
+        fi 
+        shift
+        shift
+    elif [ "$1" = "-r" ]; then
+
+        if [ "$2" = "default" ]; then
+            echo 
+            echo "     By default, used robots are the simulation ones     "
+            echo 
+
+        elif [ "$2" = "simulated" ]; then
+            echo 
+            echo "     Simulated Yaskawa with RVIZ moveIT     "
+            echo 
+            sleep 10
+            roslaunch motoman_hc10_moveit_config moveit_planning_execution.launch 
+        elif [ "$2" = "real" ]; then
+            echo 
+            echo "     Yaskawa on the montrac cell     "
+            echo 
+            sleep 10
+            roslaunch motoman_hc10_moveit_config moveit_planning_execution.launch sim:=false robot_ip:=192.168.0.113 controller:=yrc1000
+        fi
+    
+    fi
 
 fi
 	
