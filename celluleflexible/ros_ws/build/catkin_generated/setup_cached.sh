@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH='/home/etudiant/catkin_ws/devel/lib:/opt/ros/melodic/lib'
-export PKG_CONFIG_PATH='/home/etudiant/catkin_ws/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig'
+export CMAKE_PREFIX_PATH="/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel:$CMAKE_PREFIX_PATH"
 export PWD='/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build'
-export PYTHONPATH='/home/etudiant/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src:$ROS_PACKAGE_PATH"

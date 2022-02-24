@@ -21,12 +21,20 @@ function showHelp(){
     echo -e "Make sure that the file is executable ${bold}${RED}(chmod +x launch.sh)${normal} ${NC}"
     echo 
     echo "  To run it from command line use:"
-    echo "     $ ./launch.sh [Simulation_File]"
-    echo "     Example: $ ./launch.sh SimulationGauche"
+    echo "     $ ./launch.sh [arg]"
+    echo "  different arguments : -h : help, -atelier : launch with the automates   "
+    echo " 			  -atelier : launch with the automates onto the montrac cell  "
+    echo "  			  -simYaska : simulation with yaskawa robot simulated  "
+    echo
+    echo "  By default, the coppelia simulation is always running"
+    echo "  On commande_locale xterm you will have to put the same arguments"
     echo 
     echo "${bold}Authors:${normal} J.B. Blanc / C. Delage / E. Maldonado "
     echo "         M. Maurin / A. Quintana / C. Tomé"
     echo "         Mon 6 March 2017"
+    echo
+    echo "	   Modified the 24 Febuary 2022"
+    echo "	   by M. Dujardin Y. Ouis, T. Romano"
     echo "${bold}Original code author:${normal} Koen Lekkerkerker (Thu 24 Apr 2014)"
     echo "http://answers.ros.org/question/51474/can-i-run-a-bash-script-using-roslaunch/"
     echo 
@@ -38,35 +46,29 @@ else
 
 echo "            Launching the 'commande locale' node "
 echo "${bold}--------------------------------------------------------------"
-   if [ "$1" = "" ]; then
    	echo "        The simulation file was not defined."
 	echo "      Default file Simulation4Robots.ttt will be used."
 	roslaunch launcher launch_alpha.launch nbRobot:="4" & 
-   else
-   	echo "        The simulation file chosen is $1.ttt"
-	roslaunch launcher launch_alpha.launch nbRobot:=$1 &
-    
-   fi
 echo "--------------------------------------------------------------${normal}"
-
-    # Launch of the 'commande_locale' node
-	
-	
-	#roslaunch launch_alpha.launch path:=$1 &
-	shift
 
     # Wait... (10 seconds)
 
     # Launch of the other nodes
-	echo "Launching the other nodes " 
+echo "Launching the other nodes " 
 	#roslaunch launcher launch_beta.launch 
-    
-    sleep 10
-    roslaunch schneider roslaunch_cellule.launch & 
-    sleep 10
-    roslaunch schneider_104 roslaunch_cellule_104.launch & 
-    sleep 10
-    roslaunch schneider_103 roslaunch_cellule_103.launch & 
-    sleep 10
-    roslaunch motoman_hc10_moveit_config moveit_planning_execution.launch 
+   if [ "$1" = "-atelier" ]; then
+	    sleep 10
+	    roslaunch schneider roslaunch_cellule.launch & 
+	    sleep 10
+	    roslaunch schneider_104 roslaunch_cellule_104.launch & 
+	    sleep 10
+	    roslaunch schneider_103 roslaunch_cellule_103.launch & 
+	    #sleep 10
+	    #roslaunch motoman_hc10_moveit_config moveit_planning_execution.launch sim:=false robot_ip:=192.168.0.113 controller:=yrc1000
+   elif [ "$1" = "-simYaska" ]; then
+	    sleep 10
+	    roslaunch motoman_hc10_moveit_config moveit_planning_execution.launch 
+   fi
+
 fi
+	
