@@ -42,7 +42,27 @@ function showHelp(){
 
 if [ "$1" = "-h" ]; then
     showHelp
-else 
+    exit 0
+elif [ "$1" != "" ] && [ "$2" = "" ]; then
+        echo 
+        echo "                error during launching                   " 
+        echo "  Please enter options properly (see help with -h)      "
+        echo 
+        exit 0
+fi 
+
+
+echo 
+echo "            Launching the 'commande locale' node "
+echo "${bold}--------------------------------------------------------------"
+echo "        The simulation file was not defined."
+echo "      Default file Simulation4Robots.ttt will be used."
+roslaunch launcher launch_alpha.launch nbRobot:="4" & 
+echo "--------------------------------------------------------------${normal}"
+echo 
+
+while [ "$1" != "" ] && [ "$2" != "" ] 
+do
 
     if [ "$1" != "" ] && [ "$2" = "" ]; then
         echo 
@@ -50,17 +70,7 @@ else
         echo "  Please enter options properly (see help with -h)      "
         echo 
         exit 0
-    fi
-    echo 
-    echo "            Launching the 'commande locale' node "
-    echo "${bold}--------------------------------------------------------------"
-    echo "        The simulation file was not defined."
-    echo "      Default file Simulation4Robots.ttt will be used."
-    roslaunch launcher launch_alpha.launch nbRobot:="4" & 
-    echo "--------------------------------------------------------------${normal}"
-    echo 
-
-    if [ "$1" = "-m" ]; then
+    elif [ "$1" = "-m" ]; then
 
         if [ "$2" = "simulation" ]; then
             echo 
@@ -81,8 +91,7 @@ else
             roslaunch schneider_103 roslaunch_cellule_103.launch &
     
         fi 
-        shift
-        shift
+
     elif [ "$1" = "-r" ]; then
 
         if [ "$2" = "default" ]; then
@@ -105,6 +114,8 @@ else
         fi
     
     fi
+    shift
+    shift
 
-fi
+done
 	
