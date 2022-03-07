@@ -247,14 +247,15 @@ int main(int argc, char **argv)
 							cin >> choixYaska;
 					
 						}
+						if(cin.fail() || choixMode<0 || choixMode>1 || choixYaska<0 || choixYaska>2 || choixKuka<0 || choixKuka>1)
+						{
+							cout << endl << " [Erreur mauvais choix ..]" << endl;
+							cin.clear();
+							cin.ignore(256,'\n');
+							break;
+						}
 					}	
-					if(cin.fail() || choixMode<0 || choixMode>1 || choixYaska<0 || choixYaska>2 || choixKuka<0 || choixKuka>1)
-					{
-						cout << endl << " [Erreur mauvais choix ..]" << endl;
-						cin.clear();
-						cin.ignore(256,'\n');
-						break;
-					}
+					
 					msg1.mode = choixMode;
 					msg1.yaska = choixYaska;
 					msg1.kuka = choixKuka;
