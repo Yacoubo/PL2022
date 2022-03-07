@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/setup.sh
+    local-name: /home/etudiant/PL2022/celluleflexible/ros_ws/devel/setup.sh

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/motoman_hc10_moveit_config_generate_messages_lisp"
-  "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/share/common-lisp/ros/motoman_hc10_moveit_config/msg/ControlYakuzaMsg.lisp"
+  "/home/etudiant/PL2022/celluleflexible/ros_ws/devel/share/common-lisp/ros/motoman_hc10_moveit_config/msg/ControlYakuzaMsg.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

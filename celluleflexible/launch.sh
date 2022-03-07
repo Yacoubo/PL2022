@@ -113,6 +113,14 @@ do
             roslaunch motoman_hc10_moveit_config moveit_planning_execution.launch sim:=false robot_ip:=192.168.0.113 controller:=yrc1000
         fi
     
+    else
+
+        echo 
+        echo "                error with parameters                  " 
+        echo "  Please enter options properly (see help with -h)      "
+        echo 
+
+
     fi
     shift
     shift

@@ -8,15 +8,16 @@ import struct
 
 
 class Msg_ChoixMode(genpy.Message):
-  _md5sum = "8deffc0cc086c0947202ed43a2d0220b"
+  _md5sum = "783538e647ace8712931a455e0f7f74d"
   _type = "commande_locale/Msg_ChoixMode"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """int32 mode
 int32 yaska
+int32 kuka
 
 """
-  __slots__ = ['mode','yaska']
-  _slot_types = ['int32','int32']
+  __slots__ = ['mode','yaska','kuka']
+  _slot_types = ['int32','int32','int32']
 
   def __init__(self, *args, **kwds):
     """
@@ -26,7 +27,7 @@ int32 yaska
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       mode,yaska
+       mode,yaska,kuka
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -39,9 +40,12 @@ int32 yaska
         self.mode = 0
       if self.yaska is None:
         self.yaska = 0
+      if self.kuka is None:
+        self.kuka = 0
     else:
       self.mode = 0
       self.yaska = 0
+      self.kuka = 0
 
   def _get_types(self):
     """
@@ -56,7 +60,7 @@ int32 yaska
     """
     try:
       _x = self
-      buff.write(_get_struct_2i().pack(_x.mode, _x.yaska))
+      buff.write(_get_struct_3i().pack(_x.mode, _x.yaska, _x.kuka))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -71,8 +75,8 @@ int32 yaska
       end = 0
       _x = self
       start = end
-      end += 8
-      (_x.mode, _x.yaska,) = _get_struct_2i().unpack(str[start:end])
+      end += 12
+      (_x.mode, _x.yaska, _x.kuka,) = _get_struct_3i().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -86,7 +90,7 @@ int32 yaska
     """
     try:
       _x = self
-      buff.write(_get_struct_2i().pack(_x.mode, _x.yaska))
+      buff.write(_get_struct_3i().pack(_x.mode, _x.yaska, _x.kuka))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -102,8 +106,8 @@ int32 yaska
       end = 0
       _x = self
       start = end
-      end += 8
-      (_x.mode, _x.yaska,) = _get_struct_2i().unpack(str[start:end])
+      end += 12
+      (_x.mode, _x.yaska, _x.kuka,) = _get_struct_3i().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -112,9 +116,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2i = None
-def _get_struct_2i():
-    global _struct_2i
-    if _struct_2i is None:
-        _struct_2i = struct.Struct("<2i")
-    return _struct_2i
+_struct_3i = None
+def _get_struct_3i():
+    global _struct_3i
+    if _struct_3i is None:
+        _struct_3i = struct.Struct("<3i")
+    return _struct_3i

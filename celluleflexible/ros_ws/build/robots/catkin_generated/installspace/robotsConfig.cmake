@@ -67,14 +67,14 @@ set(robots_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(robots_SOURCE_PREFIX /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/robots)
-  set(robots_DEVEL_PREFIX /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel)
+  set(robots_SOURCE_PREFIX /home/etudiant/PL2022/celluleflexible/ros_ws/src/robots)
+  set(robots_DEVEL_PREFIX /home/etudiant/PL2022/celluleflexible/ros_ws/devel)
   set(robots_INSTALL_PREFIX "")
   set(robots_PREFIX ${robots_DEVEL_PREFIX})
 else()
   set(robots_SOURCE_PREFIX "")
   set(robots_DEVEL_PREFIX "")
-  set(robots_INSTALL_PREFIX /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/install)
+  set(robots_INSTALL_PREFIX /home/etudiant/PL2022/celluleflexible/ros_ws/install)
   set(robots_PREFIX ${robots_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/install/lib;/home/etudiant/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/etudiant/PL2022/celluleflexible/ros_ws/install/lib;/home/etudiant/PL2022/celluleflexible/ros_ws/devel/lib;/home/etudiant/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

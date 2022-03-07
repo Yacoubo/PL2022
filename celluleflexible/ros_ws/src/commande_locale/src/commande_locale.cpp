@@ -129,6 +129,8 @@ int main(int argc, char **argv)
 	int choixPoste=0;
 	int choixMode=0;
 	int choixYaska =0;
+	int choixParam=0;
+	int choixKuka=0;
 	while(ros::ok())
 	{
 		cout << endl << endl << endl;
@@ -137,7 +139,7 @@ int main(int argc, char **argv)
 			"	2- Pause simu" 	<< endl <<
 			"	3- Play simu" 	<< endl<<
 			"	4- Fin programme" 	<< endl <<
-			"	5- Simu ou Atelier ?"	<< endl;
+			"	5- Modif paramètres"	<< endl;
 		cout << "Choix : ";
 		cin >> choix;
 		if(choix=="hhbbgd")
@@ -207,13 +209,37 @@ int main(int argc, char **argv)
 					ros::Duration(1).sleep();
 					break;
 				case 5:
-					cout << "Mode : Simu (0) ou Atelier (1)?"<<endl;
-					cin >> choixMode;
-					if (choixMode==0){
-						cout << "Yaskawa : Coppelia (0) ou Rviz (1)?"<<endl;
-						cin >> choixYaska;
+					cout << "Modification des paramètres" 	<< endl <<
+						"	1- Choix du mode" << endl <<
+						"	2- Robot Kuka" 	<< endl <<
+						"	3- Robot Yaskawa" 	<< endl;
+					cout << "paramètre à modifier : ";
+					cin >> choixParam;
+					if (choixParam==1){
+						cout <<"Choix du mode" << endl <<
+						       "	0- Simulation"<< endl <<
+						       "	1- Atelier"<<endl;
+					cout << "mode : ";
+						cin >> choixMode;	
 					}
-					if(cin.fail() || choixMode<0 || choixMode>1 || choixYaska<0 || choixYaska>1)
+					if (choixParam==2){
+						cout <<"robot Kuka" << endl <<
+						       "	0- robot coppelia"<< endl <<
+						       "	1- robot atelier"<<endl;
+					cout << "type robot (kuka) : ";
+						cin >> choixKuka;
+					}
+					if (choixParam==3){
+						cout <<"Robot Yaskawa" << endl <<
+						       "	0- robot coppelia"<< endl <<
+						       "	1- robot rviz"<< endl <<
+						       "	2- robot atelier"<<endl;
+					cout << "type robot (yaskawa) : ";
+						cin >> choixYaska;
+				
+					}
+					
+					if(cin.fail() || choixMode<0 || choixMode>1 || choixYaska<0 || choixYaska>2 || choixKuka<0 || choixKuka>1)
 					{
 						cout << endl << " [Erreur mauvais choix ..]" << endl;
 						cin.clear();
@@ -222,6 +248,7 @@ int main(int argc, char **argv)
 					}
 					msg1.mode = choixMode;
 					msg1.yaska = choixYaska;
+					msg1.kuka = choixKuka;
 					pubModeType.publish(msg1);
 					break;
 				default:

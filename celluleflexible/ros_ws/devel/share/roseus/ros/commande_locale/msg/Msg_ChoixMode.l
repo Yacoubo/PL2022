@@ -14,17 +14,19 @@
 
 (defclass commande_locale::Msg_ChoixMode
   :super ros::object
-  :slots (_mode _yaska ))
+  :slots (_mode _yaska _kuka ))
 
 (defmethod commande_locale::Msg_ChoixMode
   (:init
    (&key
     ((:mode __mode) 0)
     ((:yaska __yaska) 0)
+    ((:kuka __kuka) 0)
     )
    (send-super :init)
    (setq _mode (round __mode))
    (setq _yaska (round __yaska))
+   (setq _kuka (round __kuka))
    self)
   (:mode
    (&optional __mode)
@@ -32,12 +34,17 @@
   (:yaska
    (&optional __yaska)
    (if __yaska (setq _yaska __yaska)) _yaska)
+  (:kuka
+   (&optional __kuka)
+   (if __kuka (setq _kuka __kuka)) _kuka)
   (:serialization-length
    ()
    (+
     ;; int32 _mode
     4
     ;; int32 _yaska
+    4
+    ;; int32 _kuka
     4
     ))
   (:serialize
@@ -48,6 +55,8 @@
        (write-long _mode s)
      ;; int32 _yaska
        (write-long _yaska s)
+     ;; int32 _kuka
+       (write-long _kuka s)
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
@@ -56,21 +65,24 @@
      (setq _mode (sys::peek buf ptr- :integer)) (incf ptr- 4)
    ;; int32 _yaska
      (setq _yaska (sys::peek buf ptr- :integer)) (incf ptr- 4)
+   ;; int32 _kuka
+     (setq _kuka (sys::peek buf ptr- :integer)) (incf ptr- 4)
    ;;
    self)
   )
 
-(setf (get commande_locale::Msg_ChoixMode :md5sum-) "8deffc0cc086c0947202ed43a2d0220b")
+(setf (get commande_locale::Msg_ChoixMode :md5sum-) "783538e647ace8712931a455e0f7f74d")
 (setf (get commande_locale::Msg_ChoixMode :datatype-) "commande_locale/Msg_ChoixMode")
 (setf (get commande_locale::Msg_ChoixMode :definition-)
       "int32 mode
 int32 yaska
+int32 kuka
 
 
 ")
 
 
 
-(provide :commande_locale/Msg_ChoixMode "8deffc0cc086c0947202ed43a2d0220b")
+(provide :commande_locale/Msg_ChoixMode "783538e647ace8712931a455e0f7f74d")
 
 

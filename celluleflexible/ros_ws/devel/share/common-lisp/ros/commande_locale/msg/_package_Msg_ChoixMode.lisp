@@ -3,4 +3,6 @@
           MODE
           YASKA-VAL
           YASKA
+          KUKA-VAL
+          KUKA
 ))

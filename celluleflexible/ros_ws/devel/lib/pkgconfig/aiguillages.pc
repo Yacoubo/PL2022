@@ -1,8 +1,8 @@
-prefix=/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel
+prefix=/home/etudiant/PL2022/celluleflexible/ros_ws/devel
 
 Name: aiguillages
 Description: Description of aiguillages
 Version: 3.1.2
-Cflags: -I/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include
+Cflags: -I/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include
 Libs: -L${prefix}/lib 
 Requires: roscpp message_runtime

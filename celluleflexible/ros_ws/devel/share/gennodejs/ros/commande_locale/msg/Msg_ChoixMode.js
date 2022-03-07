@@ -20,6 +20,7 @@ class Msg_ChoixMode {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.mode = null;
       this.yaska = null;
+      this.kuka = null;
     }
     else {
       if (initObj.hasOwnProperty('mode')) {
@@ -34,6 +35,12 @@ class Msg_ChoixMode {
       else {
         this.yaska = 0;
       }
+      if (initObj.hasOwnProperty('kuka')) {
+        this.kuka = initObj.kuka
+      }
+      else {
+        this.kuka = 0;
+      }
     }
   }
 
@@ -43,6 +50,8 @@ class Msg_ChoixMode {
     bufferOffset = _serializer.int32(obj.mode, buffer, bufferOffset);
     // Serialize message field [yaska]
     bufferOffset = _serializer.int32(obj.yaska, buffer, bufferOffset);
+    // Serialize message field [kuka]
+    bufferOffset = _serializer.int32(obj.kuka, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -54,11 +63,13 @@ class Msg_ChoixMode {
     data.mode = _deserializer.int32(buffer, bufferOffset);
     // Deserialize message field [yaska]
     data.yaska = _deserializer.int32(buffer, bufferOffset);
+    // Deserialize message field [kuka]
+    data.kuka = _deserializer.int32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 8;
+    return 12;
   }
 
   static datatype() {
@@ -68,7 +79,7 @@ class Msg_ChoixMode {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '8deffc0cc086c0947202ed43a2d0220b';
+    return '783538e647ace8712931a455e0f7f74d';
   }
 
   static messageDefinition() {
@@ -76,6 +87,7 @@ class Msg_ChoixMode {
     return `
     int32 mode
     int32 yaska
+    int32 kuka
     
     
     `;
@@ -99,6 +111,13 @@ class Msg_ChoixMode {
     }
     else {
       resolved.yaska = 0
+    }
+
+    if (msg.kuka !== undefined) {
+      resolved.kuka = msg.kuka;
+    }
+    else {
+      resolved.kuka = 0
     }
 
     return resolved;

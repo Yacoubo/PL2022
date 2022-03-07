@@ -25,11 +25,13 @@ struct Msg_ChoixMode_
 
   Msg_ChoixMode_()
     : mode(0)
-    , yaska(0)  {
+    , yaska(0)
+    , kuka(0)  {
     }
   Msg_ChoixMode_(const ContainerAllocator& _alloc)
     : mode(0)
-    , yaska(0)  {
+    , yaska(0)
+    , kuka(0)  {
   (void)_alloc;
     }
 
@@ -40,6 +42,9 @@ struct Msg_ChoixMode_
 
    typedef int32_t _yaska_type;
   _yaska_type yaska;
+
+   typedef int32_t _kuka_type;
+  _kuka_type kuka;
 
 
 
@@ -71,7 +76,8 @@ template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::commande_locale::Msg_ChoixMode_<ContainerAllocator1> & lhs, const ::commande_locale::Msg_ChoixMode_<ContainerAllocator2> & rhs)
 {
   return lhs.mode == rhs.mode &&
-    lhs.yaska == rhs.yaska;
+    lhs.yaska == rhs.yaska &&
+    lhs.kuka == rhs.kuka;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -128,12 +134,12 @@ struct MD5Sum< ::commande_locale::Msg_ChoixMode_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "8deffc0cc086c0947202ed43a2d0220b";
+    return "783538e647ace8712931a455e0f7f74d";
   }
 
   static const char* value(const ::commande_locale::Msg_ChoixMode_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x8deffc0cc086c094ULL;
-  static const uint64_t static_value2 = 0x7202ed43a2d0220bULL;
+  static const uint64_t static_value1 = 0x783538e647ace871ULL;
+  static const uint64_t static_value2 = 0x2931a455e0f7f74dULL;
 };
 
 template<class ContainerAllocator>
@@ -154,6 +160,7 @@ struct Definition< ::commande_locale::Msg_ChoixMode_<ContainerAllocator> >
   {
     return "int32 mode\n"
 "int32 yaska\n"
+"int32 kuka\n"
 "\n"
 ;
   }
@@ -175,6 +182,7 @@ namespace serialization
     {
       stream.next(m.mode);
       stream.next(m.yaska);
+      stream.next(m.kuka);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -197,6 +205,8 @@ struct Printer< ::commande_locale::Msg_ChoixMode_<ContainerAllocator> >
     Printer<int32_t>::stream(s, indent + "  ", v.mode);
     s << indent << "yaska: ";
     Printer<int32_t>::stream(s, indent + "  ", v.yaska);
+    s << indent << "kuka: ";
+    Printer<int32_t>::stream(s, indent + "  ", v.kuka);
   }
 };
 

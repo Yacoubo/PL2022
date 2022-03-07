@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/aiguillages/Msg_SensorState.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/aiguillages/Msg_SensorState.h
 string
 -
 vector
@@ -24,7 +24,7 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Actionneurs.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/Actionneurs.h
 string
 -
 vector
@@ -40,7 +40,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/DeplacerPieceMsg.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/DeplacerPieceMsg.h
 string
 -
 vector
@@ -56,7 +56,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_AddProduct.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/Msg_AddProduct.h
 string
 -
 vector
@@ -72,7 +72,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_ChoixMode.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/Msg_ChoixMode.h
 string
 -
 vector
@@ -88,25 +88,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_PinControl.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-std_msgs/Header.h
--
-
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_StopControl.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/Msg_PinControl.h
 string
 -
 vector
@@ -124,7 +106,7 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_SwitchControl.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/Msg_StopControl.h
 string
 -
 vector
@@ -142,7 +124,25 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/RobotJoints.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/Msg_SwitchControl.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/RobotJoints.h
 string
 -
 vector
@@ -158,7 +158,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProduct.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProduct.h
 ros/service_traits.h
 -
 commande_locale/SrvAddProductRequest.h
@@ -166,7 +166,7 @@ commande_locale/SrvAddProductRequest.h
 commande_locale/SrvAddProductResponse.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductPushBack.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductPushBack.h
 ros/service_traits.h
 -
 commande_locale/SrvAddProductPushBackRequest.h
@@ -174,7 +174,7 @@ commande_locale/SrvAddProductPushBackRequest.h
 commande_locale/SrvAddProductPushBackResponse.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductPushBackRequest.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductPushBackRequest.h
 string
 -
 vector
@@ -190,7 +190,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductPushBackResponse.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductPushBackResponse.h
 string
 -
 vector
@@ -206,7 +206,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductRequest.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductRequest.h
 string
 -
 vector
@@ -222,7 +222,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductResponse.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/SrvAddProductResponse.h
 string
 -
 vector
@@ -238,7 +238,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvFinInit.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/SrvFinInit.h
 ros/service_traits.h
 -
 commande_locale/SrvFinInitRequest.h
@@ -246,7 +246,7 @@ commande_locale/SrvFinInitRequest.h
 commande_locale/SrvFinInitResponse.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvFinInitRequest.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/SrvFinInitRequest.h
 string
 -
 vector
@@ -262,7 +262,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/SrvFinInitResponse.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/SrvFinInitResponse.h
 string
 -
 vector
@@ -278,7 +278,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FaireTacheMsg.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/robots/FaireTacheMsg.h
 string
 -
 vector
@@ -294,7 +294,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/FinDeplacerPiece_Msg.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/robots/FinDeplacerPiece_Msg.h
 string
 -
 vector
@@ -312,7 +312,7 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/MoveRobot.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/robots/MoveRobot.h
 string
 -
 vector
@@ -328,7 +328,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/robots/Msg_numrobot.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include/robots/Msg_numrobot.h
 string
 -
 vector
@@ -344,9 +344,9 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/AigsInterface.cpp
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/AigsInterface.cpp
 AigsInterface.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/AigsInterface.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/AigsInterface.h
 ros/ros.h
 -
 iostream
@@ -354,7 +354,7 @@ iostream
 std_msgs/Int32.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/AigsInterface.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/AigsInterface.h
 ros/ros.h
 -
 iostream
@@ -362,9 +362,9 @@ iostream
 std_msgs/Int32.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/RobotsInterface.cpp
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/RobotsInterface.cpp
 RobotsInterface.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/RobotsInterface.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/RobotsInterface.h
 ros/ros.h
 -
 iostream
@@ -374,7 +374,7 @@ unistd.h
 std_msgs/Int32.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/RobotsInterface.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/RobotsInterface.h
 ros/ros.h
 -
 iostream
@@ -392,61 +392,61 @@ std_msgs/Byte.h
 vector
 -
 robots/FaireTacheMsg.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/robots/FaireTacheMsg.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/robots/FaireTacheMsg.h
 robots/FinDeplacerPiece_Msg.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/robots/FinDeplacerPiece_Msg.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/robots/FinDeplacerPiece_Msg.h
 robots/Msg_numrobot.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/robots/Msg_numrobot.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/robots/Msg_numrobot.h
 commande_locale/Msg_ChoixMode.h
 -
 commande_locale/SrvAddProduct.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/commande_locale/SrvAddProduct.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/commande_locale/SrvAddProduct.h
 commande_locale/Msg_AddProduct.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/commande_locale/Msg_AddProduct.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/commande_locale/Msg_AddProduct.h
 commande_locale/DeplacerPieceMsg.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/commande_locale/DeplacerPieceMsg.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/commande_locale/DeplacerPieceMsg.h
 commande_locale/SrvAddProductPushBack.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/commande_locale/SrvAddProductPushBack.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/commande_locale/SrvAddProductPushBack.h
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/actionneurs.cpp
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/actionneurs.cpp
 ros/ros.h
 -
 actionneurs.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/actionneurs.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/actionneurs.h
 capteurs.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/capteurs.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/capteurs.h
 commande_locale/Msg_StopControl.h
 -
 commande_locale/Msg_SwitchControl.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/commande_locale/Msg_SwitchControl.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/commande_locale/Msg_SwitchControl.h
 commande_locale/Msg_PinControl.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/commande_locale/Msg_PinControl.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/commande_locale/Msg_PinControl.h
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/actionneurs.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/actionneurs.h
 commande_locale/Msg_StopControl.h
 -
 commande_locale/Msg_SwitchControl.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/commande_locale/Msg_SwitchControl.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/commande_locale/Msg_SwitchControl.h
 commande_locale/Msg_PinControl.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/commande_locale/Msg_PinControl.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/commande_locale/Msg_PinControl.h
 commande_locale/Actionneurs.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/commande_locale/Actionneurs.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/commande_locale/Actionneurs.h
 ros/ros.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/capteurs.cpp
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/capteurs.cpp
 capteurs.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/capteurs.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/capteurs.h
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/capteurs.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/capteurs.h
 aiguillages/Msg_SensorState.h
 -
 ros/ros.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/commande.cpp
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/commande.cpp
 commande.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/commande.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/commande.h
 ros/ros.h
 -
 iostream
@@ -454,15 +454,15 @@ iostream
 std_msgs/Int32.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/commande.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/commande.h
 ros/ros.h
 -
 actionneurs.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/actionneurs.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/actionneurs.h
 capteurs.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/capteurs.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/capteurs.h
 RobotsInterface.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/RobotsInterface.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/RobotsInterface.h
 std_msgs/Bool.h
 -
 std_msgs/Int32.h
@@ -480,31 +480,31 @@ string
 cstdlib
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/communication_baxter.cpp
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/communication_baxter.cpp
 ros/ros.h
 -
 communication_baxter.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/communication_baxter.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/communication_baxter.h
 std_msgs/Bool.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/std_msgs/Bool.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/std_msgs/Bool.h
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/communication_baxter.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/communication_baxter.h
 ros/ros.h
 -
 std_msgs/Bool.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/std_msgs/Bool.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/std_msgs/Bool.h
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/main_commande.cpp
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/main_commande.cpp
 capteurs.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/capteurs.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/capteurs.h
 actionneurs.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/actionneurs.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/actionneurs.h
 commande.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/commande.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/commande.h
 RobotsInterface.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/RobotsInterface.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/RobotsInterface.h
 AigsInterface.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/src/AigsInterface.h
+/home/etudiant/PL2022/celluleflexible/ros_ws/src/commande/src/AigsInterface.h
 ros/ros.h
 -
 unistd.h
