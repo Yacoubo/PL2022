@@ -209,36 +209,45 @@ int main(int argc, char **argv)
 					ros::Duration(1).sleep();
 					break;
 				case 5:
-					cout << "Modification des paramètres" 	<< endl <<
-						"	1- Choix du mode" << endl <<
-						"	2- Robot Kuka" 	<< endl <<
-						"	3- Robot Yaskawa" 	<< endl;
-					cout << "paramètre à modifier : ";
-					cin >> choixParam;
-					if (choixParam==1){
-						cout <<"Choix du mode" << endl <<
-						       "	0- Simulation"<< endl <<
-						       "	1- Atelier"<<endl;
-					cout << "mode : ";
-						cin >> choixMode;	
-					}
-					if (choixParam==2){
-						cout <<"robot Kuka" << endl <<
-						       "	0- robot coppelia"<< endl <<
-						       "	1- robot atelier"<<endl;
-					cout << "type robot (kuka) : ";
-						cin >> choixKuka;
-					}
-					if (choixParam==3){
-						cout <<"Robot Yaskawa" << endl <<
-						       "	0- robot coppelia"<< endl <<
-						       "	1- robot rviz"<< endl <<
-						       "	2- robot atelier"<<endl;
-					cout << "type robot (yaskawa) : ";
-						cin >> choixYaska;
-				
-					}
+				        choixParam=0;
+					while(choixParam!=4){
+						cout << "Modification des paramètres" 	<< endl <<
+							"	1- Automates" << endl <<
+							"	2- Robot Kuka" 	<< endl <<
+							"	3- Robot Yaskawa" 	<< endl <<
+							"	4- Config terminée" 	<< endl;
+						cout << "paramètre à modifier : ";
+						cin >> choixParam;
+						if( choixParam<0 || choixParam>4){
+							cout << endl << " [Erreur mauvais choix ..]" << endl;
+							cin.clear();
+							cin.ignore(256,'\n');
+							break;
+						}
+						if (choixParam==1){
+							cout <<"Choix du mode" << endl <<
+							       "	0- Simulation"<< endl <<
+							       "	1- Atelier"<<endl;
+						cout << "mode : ";
+							cin >> choixMode;	
+						}
+						if (choixParam==2){
+							cout <<"robot Kuka" << endl <<
+							       "	0- robot coppelia"<< endl <<
+							       "	1- robot atelier"<<endl;
+						cout << "type robot (kuka) : ";
+							cin >> choixKuka;
+						}
+						if (choixParam==3){
+							cout <<"Robot Yaskawa" << endl <<
+							       "	0- robot coppelia"<< endl <<
+							       "	1- robot rviz"<< endl <<
+							       "	2- robot atelier"<<endl;
+						cout << "type robot (yaskawa) : ";
+							cin >> choixYaska;
 					
+						}
+					}	
 					if(cin.fail() || choixMode<0 || choixMode>1 || choixYaska<0 || choixYaska>2 || choixKuka<0 || choixKuka>1)
 					{
 						cout << endl << " [Erreur mauvais choix ..]" << endl;
