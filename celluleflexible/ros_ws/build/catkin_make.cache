@@ -1,2 +1,2 @@
 aiguillages:commande:commande_locale:launcher:motoman:motoman_driver:motoman_hc10_moveit_config:motoman_hc10_support:motoman_msgs:robots:schneider:schneider_103:schneider_104:shuttles
--DCATKIN_DEVEL_PREFIX=/home/etudiant/PL2022/celluleflexible/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/etudiant/PL2022/celluleflexible/ros_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/install -G Unix Makefiles

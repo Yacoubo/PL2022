@@ -22,9 +22,9 @@ function showHelp(){
     echo 
     echo "  To run it from command line use:"
     echo "     $ ./launch.sh [arg]"
-    echo "  different options : -h : help, -atelier : launch with the automates   "
-    echo " 			              -m : mode simulated or physical  "
-    echo "  			          -r : choice for Yaskawa robot "
+    echo "  different options : -h : help,    "
+    echo " 			-a :  simulated (simulation) or physical (atelier) automates "
+    echo "  			-r : choice for Yaskawa robot (coppelia, rviz, physical) "
     echo
     echo "  By default, the coppelia simulation is always running"
     echo "  On commande_locale xterm you will have to put the same arguments"
@@ -70,7 +70,7 @@ do
         echo "  Please enter options properly (see help with -h)      "
         echo 
         exit 0
-    elif [ "$1" = "-m" ]; then
+    elif [ "$1" = "-a" ]; then
 
         if [ "$2" = "simulation" ]; then
             echo 
@@ -94,18 +94,18 @@ do
 
     elif [ "$1" = "-r" ]; then
 
-        if [ "$2" = "default" ]; then
+        if [ "$2" = "coppelia" ]; then
             echo 
             echo "     By default, used robots are the simulation ones     "
             echo 
 
-        elif [ "$2" = "simulated" ]; then
+        elif [ "$2" = "rviz" ]; then
             echo 
             echo "     Simulated Yaskawa with RVIZ moveIT     "
             echo 
             sleep 10
             roslaunch motoman_hc10_moveit_config moveit_planning_execution.launch 
-        elif [ "$2" = "real" ]; then
+        elif [ "$2" = "physical" ]; then
             echo 
             echo "     Yaskawa on the montrac cell     "
             echo 

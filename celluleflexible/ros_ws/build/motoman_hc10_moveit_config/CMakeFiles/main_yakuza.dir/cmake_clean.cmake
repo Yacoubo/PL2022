@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/main_yakuza.dir/src/main_yakuza.cpp.o"
   "CMakeFiles/main_yakuza.dir/src/Yakuza_tp.cpp.o"
-  "/home/etudiant/PL2022/celluleflexible/ros_ws/devel/lib/motoman_hc10_moveit_config/main_yakuza.pdb"
-  "/home/etudiant/PL2022/celluleflexible/ros_ws/devel/lib/motoman_hc10_moveit_config/main_yakuza"
+  "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/lib/motoman_hc10_moveit_config/main_yakuza.pdb"
+  "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/lib/motoman_hc10_moveit_config/main_yakuza"
 )
 
 # Per-language clean rules from dependency scanning.

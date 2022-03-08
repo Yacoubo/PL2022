@@ -87,6 +87,7 @@ private:
 	int FinTacheAtelierR4;
 	int mode;
 	int yaskaType;
+	int kukaType;
 
 	// std::vector<int> produit_a_ajouter; SUN todelete
 

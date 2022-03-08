@@ -1,8 +1,8 @@
-# Install script for directory: /home/etudiant/PL2022/celluleflexible/ros_ws/src/motoman
+# Install script for directory: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/motoman
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/etudiant/PL2022/celluleflexible/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/motoman" TYPE FILE FILES "/home/etudiant/PL2022/celluleflexible/ros_ws/src/motoman/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/motoman" TYPE FILE FILES "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/motoman/package.xml")
 endif()
 

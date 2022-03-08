@@ -68,6 +68,7 @@ void RobotsInterface::TypeMode(const commande_locale::Msg_ChoixMode::ConstPtr& m
 {
 	mode = msg1->mode;
 	yaskaType =msg1->yaska;
+	kukaType =msg1->kuka;
 
 }
 
@@ -377,7 +378,6 @@ int RobotsInterface::FinDeplacerPiece(int numRobot)
 	
 	if(mode==0){
 		int Etat;
-		cout << "yaska type"<<yaskaType<<endl;
 		if (yaskaType==1){
 			if (numRobot==4){
 				return FinTacheAtelierR4;
@@ -403,7 +403,7 @@ int RobotsInterface::FinDeplacerPiece(int numRobot)
 	}
 	else if (mode==1)
 	{
-		if (numRobot==1){
+		if (numRobot==1 && kukaType ==1){
 			return FinTacheAtelierR1;
 		}
 		if (numRobot==4){

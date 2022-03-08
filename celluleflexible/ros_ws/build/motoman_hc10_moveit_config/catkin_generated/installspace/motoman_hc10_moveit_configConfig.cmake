@@ -67,14 +67,14 @@ set(motoman_hc10_moveit_config_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(motoman_hc10_moveit_config_SOURCE_PREFIX /home/etudiant/PL2022/celluleflexible/ros_ws/src/motoman_hc10_moveit_config)
-  set(motoman_hc10_moveit_config_DEVEL_PREFIX /home/etudiant/PL2022/celluleflexible/ros_ws/devel)
+  set(motoman_hc10_moveit_config_SOURCE_PREFIX /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/motoman_hc10_moveit_config)
+  set(motoman_hc10_moveit_config_DEVEL_PREFIX /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel)
   set(motoman_hc10_moveit_config_INSTALL_PREFIX "")
   set(motoman_hc10_moveit_config_PREFIX ${motoman_hc10_moveit_config_DEVEL_PREFIX})
 else()
   set(motoman_hc10_moveit_config_SOURCE_PREFIX "")
   set(motoman_hc10_moveit_config_DEVEL_PREFIX "")
-  set(motoman_hc10_moveit_config_INSTALL_PREFIX /home/etudiant/PL2022/celluleflexible/ros_ws/install)
+  set(motoman_hc10_moveit_config_INSTALL_PREFIX /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/install)
   set(motoman_hc10_moveit_config_PREFIX ${motoman_hc10_moveit_config_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/etudiant/PL2022/celluleflexible/ros_ws/install/lib;/home/etudiant/PL2022/celluleflexible/ros_ws/devel/lib;/home/etudiant/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/install/lib;/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/lib;/home/etudiant/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

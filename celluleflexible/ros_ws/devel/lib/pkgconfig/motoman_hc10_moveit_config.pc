@@ -1,8 +1,8 @@
-prefix=/home/etudiant/PL2022/celluleflexible/ros_ws/devel
+prefix=/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel
 
 Name: motoman_hc10_moveit_config
 Description: Description of motoman_hc10_moveit_config
 Version: 0.3.0
-Cflags: -I/home/etudiant/PL2022/celluleflexible/ros_ws/devel/include
+Cflags: -I/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include
 Libs: -L${prefix}/lib 
 Requires: rospy message_runtime roscpp

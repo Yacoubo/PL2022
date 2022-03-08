@@ -213,159 +213,151 @@ int main(int argc, char **argv)
 			cmd.Ouvrir_PS(23);
 			cmd.Ouvrir_PS(24);			
 			
-			M[13]++;
+			M[1]++;
 
 			display();
   	
 		}
-		if(M[13]){
-			M[13]--;
-			
-			aiguillage.Gauche(3);
-			aiguillage.Gauche(10);
-			M[15]++;
-
-		}
-
-		if(M[15])
-		{	
-
+		if(M[1]){
 			if(capteur.get_PS(5)){
 				
-				M[15]--;
+				M[1]--;
 				aiguillage.Droite(2);
+				aiguillage.Gauche(3);
+				aiguillage.Gauche(10);
 				aiguillage.Droite(11);
-				aiguillage.Droite(1);
-				aiguillage.Droite(12);
-				M[14]++;
+				M[2]++;
 			}
 
 			display();
   	
-		}
-		if(M[14])
-		{
-			if(capteur.get_DD(1) && capteur.get_DD(2) && capteur.get_DD(11) && capteur.get_DD(12))
-			{	
-				M[14]--;
-				cmd.Ouvrir_PS(5);
-				cmd.Stop_PS(21);
-				M[50]++;
-			}
-			display();
-		}
-		if(M[50])
-		{
-			if(capteur.get_PS(21))
-			{
-				M[50]--;
-				robot.DeplacerPiece(ROBOT_1,2,4);				
-				M[2]++;
-			}
-			
-			display();
 		}
 		if(M[2])
 		{
-			if(robot.FinDeplacerPiece(ROBOT_1))
-			{
+			if(capteur.get_DD(2) && capteur.get_DG(3) && capteur.get_DG(10) && capteur.get_DD(11))
+			{	
 				M[2]--;
-				aiguillage.Gauche(1);
-				aiguillage.Gauche(2);
-				aiguillage.Droite(3);	
-				aiguillage.Droite(4);
-				aiguillage.Droite(5);
-				aiguillage.Droite(6);
-				aiguillage.Gauche(7);
-				aiguillage.Gauche(8);
-				aiguillage.Droite(9);
-				aiguillage.Droite(11);
+				cmd.Ouvrir_PS(5);
+				cmd.Stop_PS(21);
 				M[3]++;
 			}
 			display();
 		}
 		if(M[3])
 		{
-			if(capteur.get_DG(1) && capteur.get_DG(2) && capteur.get_DD(3) && capteur.get_DD(4) && capteur.get_DD(5) && capteur.get_DD(6) && capteur.get_DG(7) && capteur.get_DG(8) && capteur.get_DD(9) && capteur.get_DD(11))
+			if(capteur.get_PS(21))
 			{
 				M[3]--;
-				cmd.Ouvrir_PS(21);
-				cmd.Stop_PS(9);
+				robot.DeplacerPiece(ROBOT_1,2,4);				
+				M[4]++;
+			}
+			
+			display();
+		}
+		if(M[4])
+		{
+			if(robot.FinDeplacerPiece(ROBOT_1))
+			{
+				M[4]--;
+				cmd.Stop_PS(22);
+				cmd.Ouvrir_PS(21);								
+				M[5]++;
+			}
+			
+			display();
+		}
+		if(M[5])
+		{
+			if(capteur.get_PS(22))
+			{
+				M[5]--;
+				robot.DeplacerPiece(ROBOT_1,4,3);
+				cpt=cpt+1;
+				if(cpt>=2){
+					M[10]++;
+				}
+				else
+				{				
+					M[6]++;
+				}
+			}
+			
+			display();
+		}
+		if(M[6])
+		{
+			if(robot.FinDeplacerPiece(ROBOT_1))
+			{
+				M[6]--;
+				aiguillage.Gauche(11);
+				aiguillage.Gauche(2);
+				aiguillage.Droite(12);	
+				aiguillage.Gauche(1);
+				M[7]++;
+			}
+			display();
+		}
+		if(M[7])
+		{
+			if(capteur.get_DG(11) && capteur.get_DG(2) && capteur.get_DD(12) && capteur.get_DG(1))
+			{
+				M[7]--;
+				cmd.Ouvrir_PS(22);
+				cmd.Stop_PS(6);
 				M[8]++;
 			}
 			display();
 		}		
         	if(M[8]){ 
-			if(capteur.get_PS(9))
+			if(capteur.get_PS(6))
 			{
 				M[8]--;
-				robot.DeplacerPiece(ROBOT_4,4,2);
-				cmd.Stop_PS(10);
+				aiguillage.Droite(11);
+				cmd.Stop_PS(21);
 				M[9]++;
 			}
 			display();
 		}
 		if(M[9]){ 
-			if(robot.FinDeplacerPiece(ROBOT_4))
+			if(capteur.get_DD(11))
 			{
 				M[9]--;
-				cmd.Ouvrir_PS(9);
-				M[10]++;
+				cmd.Ouvrir_PS(6);
+				M[3]++;
 			}
 			display();
 		}
-		if(M[10]){ 
-			if(capteur.get_PS(10))
+		if(M[10])
+		{
+			if(robot.FinDeplacerPiece(ROBOT_1))
 			{
 				M[10]--;
-				robot.DeplacerPiece(ROBOT_4,3,4);
-				aiguillage.Droite(10);
-				cmd.Stop_PS(22);				
-				M[51]++;
-			}
-			display();
-		}
-		if(M[51]){ 
-			if(robot.FinDeplacerPiece(ROBOT_4) && capteur.get_DD(10))
-			{
-				M[51]--;
-				cmd.Ouvrir_PS(10);
-				M[52]++;
-			}
-			display();
-		}
-		if(M[52]){ 
-			if(capteur.get_PS(22))
-			{
-				M[52]--;
-				robot.DeplacerPiece(ROBOT_1,4,3);
-				aiguillage.Droite(12);
+				aiguillage.Gauche(11);
+				aiguillage.Droite(12);	
 				aiguillage.Droite(1);
-				cmd.Stop_PS(5);
-				M[53]++;
+				M[11]++;
+			}
+			display();
+		}
+		if(M[11])
+		{
+			if(capteur.get_DG(11) && capteur.get_DD(12) && capteur.get_DD(1))
+			{
+				M[11]--;
+				cmd.Ouvrir_PS(22);
+				cmd.Stop_PS(3);
+				M[12]++;
+			}
+			display();
+		}
+		if(M[12]){ 
+			if(capteur.get_PS(3))
+			{
+				M[12]--;
+				M[13]++;
 			}
 			display();
 		}	
-		if(M[53]){ 
-			if(robot.FinDeplacerPiece(ROBOT_1) && capteur.get_DD(12)  && capteur.get_DD(1))
-			{
-				M[53]--;
-				cmd.Ouvrir_PS(22);
-				M[54]++;
-			}
-			display();
-		}
-		if(M[54]){ 
-			if(capteur.get_PS(5))
-			{
-				M[54]--;
-				
-				M[PlaceFin]++;
-			}
-			display();
-		}
-				
-            
             
             
             

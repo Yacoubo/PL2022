@@ -1,4 +1,4 @@
-prefix=/home/etudiant/PL2022/celluleflexible/ros_ws/install
+prefix=/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/install
 
 Name: motoman_hc10_moveit_config
 Description: Description of motoman_hc10_moveit_config

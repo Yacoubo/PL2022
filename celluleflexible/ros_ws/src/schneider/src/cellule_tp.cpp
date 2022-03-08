@@ -30,6 +30,7 @@ Cellule_tp::~Cellule_tp()
 void Cellule_tp::TypeMode(const commande_locale::Msg_ChoixMode::ConstPtr& msg1)
 {
 	mode = msg1->mode;
+	isKukaPhysical = msg1->kuka;
 
 }
 
@@ -256,7 +257,7 @@ void Cellule_tp::CmdPSCallback(const commande_locale::Msg_StopControl actionneur
 void Cellule_tp::RobCallabck(const commande_locale::DeplacerPieceMsg msg)
 {
 	
-	if (msg.num_robot==1)
+	if (msg.num_robot==1 && isKukaPhysical==1)
 	{
 		if (msg.positionA==3 || msg.positionB==3)
 		{

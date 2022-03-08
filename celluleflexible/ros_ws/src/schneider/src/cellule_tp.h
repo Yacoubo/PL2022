@@ -35,6 +35,7 @@ private:
 	schneider::Msg_SensorState SensorState;
 	robots::FinDeplacerPiece_Msg SensorRobots;
 	int mode;
+	int isKukaPhysical;
 	
 public:
 	Cellule_tp(ros::NodeHandle noeud);

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/motoman_robot_state.dir/src/robot_state_node.cpp.o"
-  "/home/etudiant/PL2022/celluleflexible/ros_ws/devel/lib/motoman_driver/robot_state.pdb"
-  "/home/etudiant/PL2022/celluleflexible/ros_ws/devel/lib/motoman_driver/robot_state"
+  "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/lib/motoman_driver/robot_state.pdb"
+  "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/lib/motoman_driver/robot_state"
 )
 
 # Per-language clean rules from dependency scanning.
