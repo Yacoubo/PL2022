@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/DeplacerPieceMsg.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_ChoixMode.h
 string
 -
@@ -146,6 +162,8 @@ schneider_104/Msg_SensorState.h
 commande_locale/Msg_StopControl.h
 /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/schneider_104/src/commande_locale/Msg_StopControl.h
 commande_locale/Msg_ChoixMode.h
+-
+commande_locale/DeplacerPieceMsg.h
 -
 std_msgs/Int32.h
 -

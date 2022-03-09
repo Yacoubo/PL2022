@@ -30,6 +30,7 @@ using namespace std;
 
 int M[PlaceFin+1];
 int cpt =0;
+int cpt2=0;
 
 // Pour l'affichage //
 void display()
@@ -185,6 +186,7 @@ int main(int argc, char **argv)
 			robot.DeplacerPiece(ROBOT_1,1,3);
 			M[70]--;	
 		}*/
+
 		if(M[0])
 		{		
 			M[0]--;		
@@ -248,38 +250,49 @@ int main(int argc, char **argv)
 			if(capteur.get_PS(21))
 			{
 				M[3]--;
-				robot.DeplacerPiece(ROBOT_1,2,4);				
-				M[4]++;
+				cpt2=0;
+				robot.DeplacerPiece(ROBOT_1,2,4);
+				cpt2++;				
+				M[30]++;
 			}
 			
 			display();
 		}
-		if(M[4])
+		if(M[30])
 		{
 			if(robot.FinDeplacerPiece(ROBOT_1))
 			{
-				M[4]--;
+				M[30]--;
 				cmd.Stop_PS(22);
-				cmd.Ouvrir_PS(21);								
+				cmd.Ouvrir_PS(21);			
 				M[5]++;
 			}
 			
 			display();
 		}
+		
+		
 		if(M[5])
 		{
 			if(capteur.get_PS(22))
 			{
 				M[5]--;
 				robot.DeplacerPiece(ROBOT_1,4,3);
-				cpt=cpt+1;
-				if(cpt>=2){
-					M[10]++;
-				}
-				else
-				{				
-					M[6]++;
-				}
+				cpt2++;					
+				M[50]++;
+			}
+			
+			display();
+		}
+		
+		if(M[50])
+		{
+			if(robot.FinDeplacerPiece(ROBOT_1) )
+			{
+				M[50]--;
+				cmd.Ouvrir_PS(22);
+				M[6]++;
+				
 			}
 			
 			display();

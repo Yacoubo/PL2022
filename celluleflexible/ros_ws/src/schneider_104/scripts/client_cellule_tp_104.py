@@ -98,6 +98,8 @@ def retour(req):
 			resp.CP5 = coils[73]
 			resp.CP6 = coils[74]
 			resp.CP7 = coils[75]
+			resp.OUTR10= coils[34]
+			resp.OUTR11= coils[35]
 			return resp
 	
 def callback(data):

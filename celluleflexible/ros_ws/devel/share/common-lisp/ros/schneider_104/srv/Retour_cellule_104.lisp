@@ -53,10 +53,10 @@
   "schneider_104/Retour_cellule_104Request")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Retour_cellule_104-request>)))
   "Returns md5sum for a message object of type '<Retour_cellule_104-request>"
-  "da2dff768924005c2c1434c86e6e1a14")
+  "395bbdfbafdfe223e31db99be85ae95b")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'Retour_cellule_104-request)))
   "Returns md5sum for a message object of type 'Retour_cellule_104-request"
-  "da2dff768924005c2c1434c86e6e1a14")
+  "395bbdfbafdfe223e31db99be85ae95b")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Retour_cellule_104-request>)))
   "Returns full string definition for message of type '<Retour_cellule_104-request>"
   (cl:format cl:nil "int32 memoire~%~%~%"))
@@ -354,6 +354,16 @@
     :reader CP7
     :initarg :CP7
     :type cl:boolean
+    :initform cl:nil)
+   (OUTR10
+    :reader OUTR10
+    :initarg :OUTR10
+    :type cl:boolean
+    :initform cl:nil)
+   (OUTR11
+    :reader OUTR11
+    :initarg :OUTR11
+    :type cl:boolean
     :initform cl:nil))
 )
 
@@ -644,6 +654,16 @@
 (cl:defmethod CP7-val ((m <Retour_cellule_104-response>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader schneider_104-srv:CP7-val is deprecated.  Use schneider_104-srv:CP7 instead.")
   (CP7 m))
+
+(cl:ensure-generic-function 'OUTR10-val :lambda-list '(m))
+(cl:defmethod OUTR10-val ((m <Retour_cellule_104-response>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader schneider_104-srv:OUTR10-val is deprecated.  Use schneider_104-srv:OUTR10 instead.")
+  (OUTR10 m))
+
+(cl:ensure-generic-function 'OUTR11-val :lambda-list '(m))
+(cl:defmethod OUTR11-val ((m <Retour_cellule_104-response>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader schneider_104-srv:OUTR11-val is deprecated.  Use schneider_104-srv:OUTR11 instead.")
+  (OUTR11 m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <Retour_cellule_104-response>) ostream)
   "Serializes a message object of type '<Retour_cellule_104-response>"
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'ST8) 1 0)) ostream)
@@ -702,6 +722,8 @@
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'CP5) 1 0)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'CP6) 1 0)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'CP7) 1 0)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'OUTR10) 1 0)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'OUTR11) 1 0)) ostream)
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <Retour_cellule_104-response>) istream)
   "Deserializes a message object of type '<Retour_cellule_104-response>"
@@ -761,6 +783,8 @@
     (cl:setf (cl:slot-value msg 'CP5) (cl:not (cl:zerop (cl:read-byte istream))))
     (cl:setf (cl:slot-value msg 'CP6) (cl:not (cl:zerop (cl:read-byte istream))))
     (cl:setf (cl:slot-value msg 'CP7) (cl:not (cl:zerop (cl:read-byte istream))))
+    (cl:setf (cl:slot-value msg 'OUTR10) (cl:not (cl:zerop (cl:read-byte istream))))
+    (cl:setf (cl:slot-value msg 'OUTR11) (cl:not (cl:zerop (cl:read-byte istream))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<Retour_cellule_104-response>)))
@@ -771,18 +795,20 @@
   "schneider_104/Retour_cellule_104Response")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Retour_cellule_104-response>)))
   "Returns md5sum for a message object of type '<Retour_cellule_104-response>"
-  "da2dff768924005c2c1434c86e6e1a14")
+  "395bbdfbafdfe223e31db99be85ae95b")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'Retour_cellule_104-response)))
   "Returns md5sum for a message object of type 'Retour_cellule_104-response"
-  "da2dff768924005c2c1434c86e6e1a14")
+  "395bbdfbafdfe223e31db99be85ae95b")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Retour_cellule_104-response>)))
   "Returns full string definition for message of type '<Retour_cellule_104-response>"
-  (cl:format cl:nil "bool ST8~%bool ST9~%bool ST10~%bool ST11~%bool ST12~%bool ST13~%bool ST14~%bool ST15~%bool ST16~%bool ST17~%bool R5D~%bool R6D~%bool R7D~%bool R8D~%bool R5G~%bool R6G~%bool R7G~%bool R8G~%bool PI3~%bool PI4~%bool PI5~%bool PI6~%bool D5~%bool D6~%bool D7~%bool D8~%bool V5~%bool V6~%bool V7~%bool V8~%bool PS8~%bool PS9~%bool PS10~%bool PS11~%bool PS12~%bool PS13~%bool PS14~%bool PS15~%bool PS16~%bool PS17~%bool D5D~%bool D6D~%bool D7D~%bool D8D~%bool D5G~%bool D6G~%bool D7G~%bool D8G~%bool CPI3~%bool CPI4~%bool CPI5~%bool CPI6~%bool CP4~%bool CP5~%bool CP6~%bool CP7~%~%~%~%"))
+  (cl:format cl:nil "bool ST8~%bool ST9~%bool ST10~%bool ST11~%bool ST12~%bool ST13~%bool ST14~%bool ST15~%bool ST16~%bool ST17~%bool R5D~%bool R6D~%bool R7D~%bool R8D~%bool R5G~%bool R6G~%bool R7G~%bool R8G~%bool PI3~%bool PI4~%bool PI5~%bool PI6~%bool D5~%bool D6~%bool D7~%bool D8~%bool V5~%bool V6~%bool V7~%bool V8~%bool PS8~%bool PS9~%bool PS10~%bool PS11~%bool PS12~%bool PS13~%bool PS14~%bool PS15~%bool PS16~%bool PS17~%bool D5D~%bool D6D~%bool D7D~%bool D8D~%bool D5G~%bool D6G~%bool D7G~%bool D8G~%bool CPI3~%bool CPI4~%bool CPI5~%bool CPI6~%bool CP4~%bool CP5~%bool CP6~%bool CP7~%bool OUTR10~%bool OUTR11~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'Retour_cellule_104-response)))
   "Returns full string definition for message of type 'Retour_cellule_104-response"
-  (cl:format cl:nil "bool ST8~%bool ST9~%bool ST10~%bool ST11~%bool ST12~%bool ST13~%bool ST14~%bool ST15~%bool ST16~%bool ST17~%bool R5D~%bool R6D~%bool R7D~%bool R8D~%bool R5G~%bool R6G~%bool R7G~%bool R8G~%bool PI3~%bool PI4~%bool PI5~%bool PI6~%bool D5~%bool D6~%bool D7~%bool D8~%bool V5~%bool V6~%bool V7~%bool V8~%bool PS8~%bool PS9~%bool PS10~%bool PS11~%bool PS12~%bool PS13~%bool PS14~%bool PS15~%bool PS16~%bool PS17~%bool D5D~%bool D6D~%bool D7D~%bool D8D~%bool D5G~%bool D6G~%bool D7G~%bool D8G~%bool CPI3~%bool CPI4~%bool CPI5~%bool CPI6~%bool CP4~%bool CP5~%bool CP6~%bool CP7~%~%~%~%"))
+  (cl:format cl:nil "bool ST8~%bool ST9~%bool ST10~%bool ST11~%bool ST12~%bool ST13~%bool ST14~%bool ST15~%bool ST16~%bool ST17~%bool R5D~%bool R6D~%bool R7D~%bool R8D~%bool R5G~%bool R6G~%bool R7G~%bool R8G~%bool PI3~%bool PI4~%bool PI5~%bool PI6~%bool D5~%bool D6~%bool D7~%bool D8~%bool V5~%bool V6~%bool V7~%bool V8~%bool PS8~%bool PS9~%bool PS10~%bool PS11~%bool PS12~%bool PS13~%bool PS14~%bool PS15~%bool PS16~%bool PS17~%bool D5D~%bool D6D~%bool D7D~%bool D8D~%bool D5G~%bool D6G~%bool D7G~%bool D8G~%bool CPI3~%bool CPI4~%bool CPI5~%bool CPI6~%bool CP4~%bool CP5~%bool CP6~%bool CP7~%bool OUTR10~%bool OUTR11~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <Retour_cellule_104-response>))
   (cl:+ 0
+     1
+     1
      1
      1
      1
@@ -899,6 +925,8 @@
     (cl:cons ':CP5 (CP5 msg))
     (cl:cons ':CP6 (CP6 msg))
     (cl:cons ':CP7 (CP7 msg))
+    (cl:cons ':OUTR10 (OUTR10 msg))
+    (cl:cons ':OUTR11 (OUTR11 msg))
 ))
 (cl:defmethod roslisp-msg-protocol:service-request-type ((msg (cl:eql 'Retour_cellule_104)))
   'Retour_cellule_104-request)

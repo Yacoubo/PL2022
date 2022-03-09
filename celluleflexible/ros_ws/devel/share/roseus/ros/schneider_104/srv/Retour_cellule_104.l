@@ -57,7 +57,7 @@
 
 (defclass schneider_104::Retour_cellule_104Response
   :super ros::object
-  :slots (_ST8 _ST9 _ST10 _ST11 _ST12 _ST13 _ST14 _ST15 _ST16 _ST17 _R5D _R6D _R7D _R8D _R5G _R6G _R7G _R8G _PI3 _PI4 _PI5 _PI6 _D5 _D6 _D7 _D8 _V5 _V6 _V7 _V8 _PS8 _PS9 _PS10 _PS11 _PS12 _PS13 _PS14 _PS15 _PS16 _PS17 _D5D _D6D _D7D _D8D _D5G _D6G _D7G _D8G _CPI3 _CPI4 _CPI5 _CPI6 _CP4 _CP5 _CP6 _CP7 ))
+  :slots (_ST8 _ST9 _ST10 _ST11 _ST12 _ST13 _ST14 _ST15 _ST16 _ST17 _R5D _R6D _R7D _R8D _R5G _R6G _R7G _R8G _PI3 _PI4 _PI5 _PI6 _D5 _D6 _D7 _D8 _V5 _V6 _V7 _V8 _PS8 _PS9 _PS10 _PS11 _PS12 _PS13 _PS14 _PS15 _PS16 _PS17 _D5D _D6D _D7D _D8D _D5G _D6G _D7G _D8G _CPI3 _CPI4 _CPI5 _CPI6 _CP4 _CP5 _CP6 _CP7 _OUTR10 _OUTR11 ))
 
 (defmethod schneider_104::Retour_cellule_104Response
   (:init
@@ -118,6 +118,8 @@
     ((:CP5 __CP5) nil)
     ((:CP6 __CP6) nil)
     ((:CP7 __CP7) nil)
+    ((:OUTR10 __OUTR10) nil)
+    ((:OUTR11 __OUTR11) nil)
     )
    (send-super :init)
    (setq _ST8 __ST8)
@@ -176,6 +178,8 @@
    (setq _CP5 __CP5)
    (setq _CP6 __CP6)
    (setq _CP7 __CP7)
+   (setq _OUTR10 __OUTR10)
+   (setq _OUTR11 __OUTR11)
    self)
   (:ST8
    (&optional __ST8)
@@ -345,6 +349,12 @@
   (:CP7
    (&optional __CP7)
    (if __CP7 (setq _CP7 __CP7)) _CP7)
+  (:OUTR10
+   (&optional __OUTR10)
+   (if __OUTR10 (setq _OUTR10 __OUTR10)) _OUTR10)
+  (:OUTR11
+   (&optional __OUTR11)
+   (if __OUTR11 (setq _OUTR11 __OUTR11)) _OUTR11)
   (:serialization-length
    ()
    (+
@@ -459,6 +469,10 @@
     ;; bool _CP6
     1
     ;; bool _CP7
+    1
+    ;; bool _OUTR10
+    1
+    ;; bool _OUTR11
     1
     ))
   (:serialize
@@ -577,6 +591,10 @@
        (if _CP6 (write-byte -1 s) (write-byte 0 s))
      ;; bool _CP7
        (if _CP7 (write-byte -1 s) (write-byte 0 s))
+     ;; bool _OUTR10
+       (if _OUTR10 (write-byte -1 s) (write-byte 0 s))
+     ;; bool _OUTR11
+       (if _OUTR11 (write-byte -1 s) (write-byte 0 s))
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
@@ -693,6 +711,10 @@
      (setq _CP6 (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;; bool _CP7
      (setq _CP7 (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
+   ;; bool _OUTR10
+     (setq _OUTR10 (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
+   ;; bool _OUTR11
+     (setq _OUTR11 (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;;
    self)
   )
@@ -701,7 +723,7 @@
   :super ros::object
   :slots ())
 
-(setf (get schneider_104::Retour_cellule_104 :md5sum-) "da2dff768924005c2c1434c86e6e1a14")
+(setf (get schneider_104::Retour_cellule_104 :md5sum-) "395bbdfbafdfe223e31db99be85ae95b")
 (setf (get schneider_104::Retour_cellule_104 :datatype-) "schneider_104/Retour_cellule_104")
 (setf (get schneider_104::Retour_cellule_104 :request) schneider_104::Retour_cellule_104Request)
 (setf (get schneider_104::Retour_cellule_104 :response) schneider_104::Retour_cellule_104Response)
@@ -709,7 +731,7 @@
 (defmethod schneider_104::Retour_cellule_104Request
   (:response () (instance schneider_104::Retour_cellule_104Response :init)))
 
-(setf (get schneider_104::Retour_cellule_104Request :md5sum-) "da2dff768924005c2c1434c86e6e1a14")
+(setf (get schneider_104::Retour_cellule_104Request :md5sum-) "395bbdfbafdfe223e31db99be85ae95b")
 (setf (get schneider_104::Retour_cellule_104Request :datatype-) "schneider_104/Retour_cellule_104Request")
 (setf (get schneider_104::Retour_cellule_104Request :definition-)
       "int32 memoire
@@ -770,10 +792,12 @@ bool CP4
 bool CP5
 bool CP6
 bool CP7
+bool OUTR10
+bool OUTR11
 
 ")
 
-(setf (get schneider_104::Retour_cellule_104Response :md5sum-) "da2dff768924005c2c1434c86e6e1a14")
+(setf (get schneider_104::Retour_cellule_104Response :md5sum-) "395bbdfbafdfe223e31db99be85ae95b")
 (setf (get schneider_104::Retour_cellule_104Response :datatype-) "schneider_104/Retour_cellule_104Response")
 (setf (get schneider_104::Retour_cellule_104Response :definition-)
       "int32 memoire
@@ -834,11 +858,13 @@ bool CP4
 bool CP5
 bool CP6
 bool CP7
+bool OUTR10
+bool OUTR11
 
 ")
 
 
 
-(provide :schneider_104/Retour_cellule_104 "da2dff768924005c2c1434c86e6e1a14")
+(provide :schneider_104/Retour_cellule_104 "395bbdfbafdfe223e31db99be85ae95b")
 
 

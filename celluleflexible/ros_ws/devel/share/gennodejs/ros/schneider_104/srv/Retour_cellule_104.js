@@ -148,6 +148,8 @@ class Retour_cellule_104Response {
       this.CP5 = null;
       this.CP6 = null;
       this.CP7 = null;
+      this.OUTR10 = null;
+      this.OUTR11 = null;
     }
     else {
       if (initObj.hasOwnProperty('ST8')) {
@@ -486,6 +488,18 @@ class Retour_cellule_104Response {
       else {
         this.CP7 = false;
       }
+      if (initObj.hasOwnProperty('OUTR10')) {
+        this.OUTR10 = initObj.OUTR10
+      }
+      else {
+        this.OUTR10 = false;
+      }
+      if (initObj.hasOwnProperty('OUTR11')) {
+        this.OUTR11 = initObj.OUTR11
+      }
+      else {
+        this.OUTR11 = false;
+      }
     }
   }
 
@@ -603,6 +617,10 @@ class Retour_cellule_104Response {
     bufferOffset = _serializer.bool(obj.CP6, buffer, bufferOffset);
     // Serialize message field [CP7]
     bufferOffset = _serializer.bool(obj.CP7, buffer, bufferOffset);
+    // Serialize message field [OUTR10]
+    bufferOffset = _serializer.bool(obj.OUTR10, buffer, bufferOffset);
+    // Serialize message field [OUTR11]
+    bufferOffset = _serializer.bool(obj.OUTR11, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -722,11 +740,15 @@ class Retour_cellule_104Response {
     data.CP6 = _deserializer.bool(buffer, bufferOffset);
     // Deserialize message field [CP7]
     data.CP7 = _deserializer.bool(buffer, bufferOffset);
+    // Deserialize message field [OUTR10]
+    data.OUTR10 = _deserializer.bool(buffer, bufferOffset);
+    // Deserialize message field [OUTR11]
+    data.OUTR11 = _deserializer.bool(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 56;
+    return 58;
   }
 
   static datatype() {
@@ -736,7 +758,7 @@ class Retour_cellule_104Response {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'e2f36819397689b3da7a9f133a5a1cfa';
+    return 'b24122ba5344d2982ccf2baa7b9a97c9';
   }
 
   static messageDefinition() {
@@ -798,6 +820,8 @@ class Retour_cellule_104Response {
     bool CP5
     bool CP6
     bool CP7
+    bool OUTR10
+    bool OUTR11
     
     
     `;
@@ -1201,6 +1225,20 @@ class Retour_cellule_104Response {
       resolved.CP7 = false
     }
 
+    if (msg.OUTR10 !== undefined) {
+      resolved.OUTR10 = msg.OUTR10;
+    }
+    else {
+      resolved.OUTR10 = false
+    }
+
+    if (msg.OUTR11 !== undefined) {
+      resolved.OUTR11 = msg.OUTR11;
+    }
+    else {
+      resolved.OUTR11 = false
+    }
+
     return resolved;
     }
 };
@@ -1208,6 +1246,6 @@ class Retour_cellule_104Response {
 module.exports = {
   Request: Retour_cellule_104Request,
   Response: Retour_cellule_104Response,
-  md5sum() { return 'da2dff768924005c2c1434c86e6e1a14'; },
+  md5sum() { return '395bbdfbafdfe223e31db99be85ae95b'; },
   datatype() { return 'schneider_104/Retour_cellule_104'; }
 };

@@ -15,6 +15,7 @@ Cellule_tp::Cellule_tp(ros::NodeHandle noeud)
 	cmd_aigGauche_cell_104=noeud.subscribe("/commande/Simulation/AiguillageGauche",100,&Cellule_tp::AigGaucheCallback,this);
 	cmd_aigDroite_cell_104=noeud.subscribe("/commande/Simulation/AiguillageDroite",100,&Cellule_tp::AigDroiteCallback,this);
 	cmd_PS_104=noeud.subscribe("/commande/Simulation/Actionneurs_stops", 100,&Cellule_tp::CmdPSCallback,this);
+	robot=noeud.subscribe("/commande/Simulation/DeplacerPiece",10,&Cellule_tp::RobCallabck,this);
 	pub_104 = noeud.advertise<std_msgs::String>("/control_cellule_104", 1);
 	cap_104 = noeud.advertise<schneider_104::Msg_SensorState>("/commande/Simulation/Capteurs", 1);
 	client = noeud.serviceClient<schneider_104::Retour_cellule_104>("retour_cellule_104");
@@ -28,6 +29,7 @@ Cellule_tp::~Cellule_tp()
 void Cellule_tp::TypeMode(const commande_locale::Msg_ChoixMode::ConstPtr& msg1)
 {
 	mode = msg1->mode;
+	isKukaPhysical = msg1->kuka;
 }
 
 
@@ -184,4 +186,30 @@ void Cellule_tp::CmdPSCallback(const commande_locale::Msg_StopControl actionneur
 		}
 	}
 }
+
+void Cellule_tp::RobCallabck(const commande_locale::DeplacerPieceMsg msg)
+{
+	
+	if (msg.num_robot==1 && isKukaPhysical==1)
+	{
+		
+		if(msg.positionA==1 || msg.positionB==1 )
+		{
+			this->write({{34,1}});
+			ros::Duration(2).sleep();
+			this->write({{34,0}});
+		}
+		else if(msg.positionA==4 || msg.positionB==4)
+		{
+			this->write({{35,1}});
+			ros::Duration(2).sleep();
+			this->write({{35,0}});
+		}
+		
+
+	}
+}
+
+
+
 

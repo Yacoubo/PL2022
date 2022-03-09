@@ -56,3 +56,5 @@ bool CP4
 bool CP5
 bool CP6
 bool CP7
+bool OUTR10
+bool OUTR11

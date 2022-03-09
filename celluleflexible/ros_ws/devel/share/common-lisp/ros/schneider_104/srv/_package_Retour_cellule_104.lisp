@@ -113,4 +113,8 @@
           CP6
           CP7-VAL
           CP7
+          OUTR10-VAL
+          OUTR10
+          OUTR11-VAL
+          OUTR11
 ))

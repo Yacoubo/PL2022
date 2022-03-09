@@ -79,7 +79,9 @@ struct Retour_cellule_104Response_
     , CP4(false)
     , CP5(false)
     , CP6(false)
-    , CP7(false)  {
+    , CP7(false)
+    , OUTR10(false)
+    , OUTR11(false)  {
     }
   Retour_cellule_104Response_(const ContainerAllocator& _alloc)
     : ST8(false)
@@ -137,7 +139,9 @@ struct Retour_cellule_104Response_
     , CP4(false)
     , CP5(false)
     , CP6(false)
-    , CP7(false)  {
+    , CP7(false)
+    , OUTR10(false)
+    , OUTR11(false)  {
   (void)_alloc;
     }
 
@@ -311,6 +315,12 @@ struct Retour_cellule_104Response_
    typedef uint8_t _CP7_type;
   _CP7_type CP7;
 
+   typedef uint8_t _OUTR10_type;
+  _OUTR10_type OUTR10;
+
+   typedef uint8_t _OUTR11_type;
+  _OUTR11_type OUTR11;
+
 
 
 
@@ -395,7 +405,9 @@ bool operator==(const ::schneider_104::Retour_cellule_104Response_<ContainerAllo
     lhs.CP4 == rhs.CP4 &&
     lhs.CP5 == rhs.CP5 &&
     lhs.CP6 == rhs.CP6 &&
-    lhs.CP7 == rhs.CP7;
+    lhs.CP7 == rhs.CP7 &&
+    lhs.OUTR10 == rhs.OUTR10 &&
+    lhs.OUTR11 == rhs.OUTR11;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -452,12 +464,12 @@ struct MD5Sum< ::schneider_104::Retour_cellule_104Response_<ContainerAllocator> 
 {
   static const char* value()
   {
-    return "e2f36819397689b3da7a9f133a5a1cfa";
+    return "b24122ba5344d2982ccf2baa7b9a97c9";
   }
 
   static const char* value(const ::schneider_104::Retour_cellule_104Response_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xe2f36819397689b3ULL;
-  static const uint64_t static_value2 = 0xda7a9f133a5a1cfaULL;
+  static const uint64_t static_value1 = 0xb24122ba5344d298ULL;
+  static const uint64_t static_value2 = 0x2ccf2baa7b9a97c9ULL;
 };
 
 template<class ContainerAllocator>
@@ -532,6 +544,8 @@ struct Definition< ::schneider_104::Retour_cellule_104Response_<ContainerAllocat
 "bool CP5\n"
 "bool CP6\n"
 "bool CP7\n"
+"bool OUTR10\n"
+"bool OUTR11\n"
 "\n"
 ;
   }
@@ -607,6 +621,8 @@ namespace serialization
       stream.next(m.CP5);
       stream.next(m.CP6);
       stream.next(m.CP7);
+      stream.next(m.OUTR10);
+      stream.next(m.OUTR11);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -737,6 +753,10 @@ struct Printer< ::schneider_104::Retour_cellule_104Response_<ContainerAllocator>
     Printer<uint8_t>::stream(s, indent + "  ", v.CP6);
     s << indent << "CP7: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.CP7);
+    s << indent << "OUTR10: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.OUTR10);
+    s << indent << "OUTR11: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.OUTR11);
   }
 };
 

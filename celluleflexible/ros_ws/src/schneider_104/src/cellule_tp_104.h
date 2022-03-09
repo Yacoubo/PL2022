@@ -7,6 +7,7 @@
 #include <schneider_104/Msg_SensorState.h>
 #include "commande_locale/Msg_StopControl.h"
 #include <commande_locale/Msg_ChoixMode.h>
+#include <commande_locale/DeplacerPieceMsg.h>
 #include <std_msgs/Int32.h>
 #include <unistd.h>
 #include <std_msgs/Byte.h>
@@ -27,9 +28,11 @@ private:
 	ros::Subscriber cmd_aigGauche_cell_104;
 	ros::Subscriber cmd_aigDroite_cell_104;
 	ros::Subscriber cmd_PS_104;
+	ros::Subscriber robot;
 	schneider_104::Msg_SensorState SensorState;
 	ros::Subscriber choixMode;
 	int mode;
+	int isKukaPhysical;
 	
 public:
 	Cellule_tp(ros::NodeHandle noeud);
@@ -39,6 +42,7 @@ public:
 	void AigGaucheCallback(const std_msgs::Int32::ConstPtr& msg_aigs);
 	void AigDroiteCallback(const std_msgs::Int32::ConstPtr& msg_aigs);
 	void CmdPSCallback(const commande_locale::Msg_StopControl actionneurs_simulation_Stop);
+	void RobCallabck(const commande_locale::DeplacerPieceMsg msg);
 	void TypeMode(const commande_locale::Msg_ChoixMode::ConstPtr& msg1);
 	bool ST8;
 	bool ST9;

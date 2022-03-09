@@ -198,6 +198,10 @@ int main(int argc, char **argv)
 					break;
 
 				case 3:
+					msg1.mode = choixMode;
+					msg1.yaska = choixYaska;
+					msg1.kuka = choixKuka;
+					pubModeType.publish(msg1);
 					cout << "Mise en Play de la simu" << endl;
 					VREPController.play();
 					break;
@@ -255,11 +259,6 @@ int main(int argc, char **argv)
 							break;
 						}
 					}	
-					
-					msg1.mode = choixMode;
-					msg1.yaska = choixYaska;
-					msg1.kuka = choixKuka;
-					pubModeType.publish(msg1);
 					break;
 				default:
 					cout << endl << " [Erreur mauvais choix ..]" << endl;
