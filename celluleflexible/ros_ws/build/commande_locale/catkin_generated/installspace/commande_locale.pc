@@ -1,4 +1,4 @@
-prefix=/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/install
+prefix=/home/projet-long18/PL2022/celluleflexible/ros_ws/install
 
 Name: commande_locale
 Description: Description of commande_locale

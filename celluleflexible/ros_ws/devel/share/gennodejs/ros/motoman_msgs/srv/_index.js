@@ -1,12 +1,12 @@
 
 "use strict";
 
-let WriteSingleIO = require('./WriteSingleIO.js')
 let CmdJointTrajectoryEx = require('./CmdJointTrajectoryEx.js')
+let WriteSingleIO = require('./WriteSingleIO.js')
 let ReadSingleIO = require('./ReadSingleIO.js')
 
 module.exports = {
-  WriteSingleIO: WriteSingleIO,
   CmdJointTrajectoryEx: CmdJointTrajectoryEx,
+  WriteSingleIO: WriteSingleIO,
   ReadSingleIO: ReadSingleIO,
 };

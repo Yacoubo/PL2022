@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/display_node.dir/src/display.cpp.o"
-  "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/lib/commande_locale/display_node.pdb"
-  "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/lib/commande_locale/display_node"
+  "/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/lib/commande_locale/display_node.pdb"
+  "/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/lib/commande_locale/display_node"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,4 +1,4 @@
-prefix=/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel
+prefix=/home/projet-long18/PL2022/celluleflexible/ros_ws/devel
 
 Name: commande
 Description: Description of commande

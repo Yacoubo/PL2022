@@ -67,14 +67,14 @@ set(aiguillages_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(aiguillages_SOURCE_PREFIX /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/aiguillages)
-  set(aiguillages_DEVEL_PREFIX /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel)
+  set(aiguillages_SOURCE_PREFIX /home/projet-long18/PL2022/celluleflexible/ros_ws/src/aiguillages)
+  set(aiguillages_DEVEL_PREFIX /home/projet-long18/PL2022/celluleflexible/ros_ws/devel)
   set(aiguillages_INSTALL_PREFIX "")
   set(aiguillages_PREFIX ${aiguillages_DEVEL_PREFIX})
 else()
   set(aiguillages_SOURCE_PREFIX "")
   set(aiguillages_DEVEL_PREFIX "")
-  set(aiguillages_INSTALL_PREFIX /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/install)
+  set(aiguillages_INSTALL_PREFIX /home/projet-long18/PL2022/celluleflexible/ros_ws/install)
   set(aiguillages_PREFIX ${aiguillages_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(aiguillages_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include " STREQUAL " ")
+if(NOT "/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include " STREQUAL " ")
   set(aiguillages_INCLUDE_DIRS "")
-  set(_include_dirs "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include")
+  set(_include_dirs "/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://www.fr " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include "
         message(FATAL_ERROR "Project 'aiguillages' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'aiguillages' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/aiguillages/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'aiguillages' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/projet-long18/PL2022/celluleflexible/ros_ws/src/aiguillages/${idir}'.  ${_report}")
     endif()
     _list_append_unique(aiguillages_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/lib;/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/lib;/home/etudiant/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/projet-long18/PL2022/celluleflexible/ros_ws/devel/lib;/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/lib;/home/projet-long18/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

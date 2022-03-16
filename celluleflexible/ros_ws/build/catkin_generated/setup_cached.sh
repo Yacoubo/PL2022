@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH='/home/etudiant/catkin_ws/devel/lib:/opt/ros/melodic/lib'
-export PKG_CONFIG_PATH='/home/etudiant/catkin_ws/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig'
-export PWD='/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build'
-export PYTHONPATH='/home/etudiant/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages'
+export LD_LIBRARY_PATH='/home/projet-long18/catkin_ws/devel/lib:/opt/ros/melodic/lib'
+export PKG_CONFIG_PATH='/home/projet-long18/catkin_ws/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig'
+export PWD='/home/projet-long18/PL2022/celluleflexible/ros_ws/build'
+export PYTHONPATH='/home/projet-long18/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages'

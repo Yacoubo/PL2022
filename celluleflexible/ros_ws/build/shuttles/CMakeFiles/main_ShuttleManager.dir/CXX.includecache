@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/aiguillages/Msg_SensorState.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include/aiguillages/Msg_SensorState.h
 string
 -
 vector
@@ -24,7 +24,7 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/shuttles/Msg_Erreur.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include/shuttles/Msg_Erreur.h
 string
 -
 vector
@@ -40,7 +40,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/shuttles/shuttle_id.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include/shuttles/shuttle_id.h
 ros/service_traits.h
 -
 shuttles/shuttle_idRequest.h
@@ -48,7 +48,7 @@ shuttles/shuttle_idRequest.h
 shuttles/shuttle_idResponse.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/shuttles/shuttle_idRequest.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include/shuttles/shuttle_idRequest.h
 string
 -
 vector
@@ -64,7 +64,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/shuttles/shuttle_idResponse.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include/shuttles/shuttle_idResponse.h
 string
 -
 vector
@@ -80,29 +80,29 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/src/FileAttente.cpp
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/shuttles/src/FileAttente.cpp
 FileAttente.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/src/FileAttente.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/shuttles/src/FileAttente.h
 ros/ros.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/src/FileAttente.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/shuttles/src/FileAttente.h
 iostream
 -
 queue
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/src/capteurs.cpp
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/shuttles/src/capteurs.cpp
 capteurs.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/src/capteurs.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/shuttles/src/capteurs.h
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/src/capteurs.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/shuttles/src/capteurs.h
 aiguillages/Msg_SensorState.h
 -
 ros/ros.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/src/main_ShuttleManager.cpp
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/shuttles/src/main_ShuttleManager.cpp
 ros/ros.h
 -
 unistd.h
@@ -110,19 +110,19 @@ unistd.h
 queue
 -
 FileAttente.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/src/FileAttente.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/shuttles/src/FileAttente.h
 std_msgs/Int32.h
 -
 capteurs.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/src/capteurs.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/shuttles/src/capteurs.h
 std_msgs/Byte.h
 -
 shuttles/Msg_Erreur.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/src/shuttles/Msg_Erreur.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/shuttles/src/shuttles/Msg_Erreur.h
 iostream
 -
 shuttles/shuttle_id.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/src/shuttles/shuttle_id.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/shuttles/src/shuttles/shuttle_id.h
 
 /opt/ros/melodic/include/ros/advertise_options.h
 ros/forwards.h

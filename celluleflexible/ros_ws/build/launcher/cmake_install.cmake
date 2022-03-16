@@ -1,8 +1,8 @@
-# Install script for directory: /home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/launcher
+# Install script for directory: /home/projet-long18/PL2022/celluleflexible/ros_ws/src/launcher
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/projet-long18/PL2022/celluleflexible/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build/launcher/catkin_generated/installspace/launcher.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/projet-long18/PL2022/celluleflexible/ros_ws/build/launcher/catkin_generated/installspace/launcher.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/launcher/cmake" TYPE FILE FILES
-    "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build/launcher/catkin_generated/installspace/launcherConfig.cmake"
-    "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/build/launcher/catkin_generated/installspace/launcherConfig-version.cmake"
+    "/home/projet-long18/PL2022/celluleflexible/ros_ws/build/launcher/catkin_generated/installspace/launcherConfig.cmake"
+    "/home/projet-long18/PL2022/celluleflexible/ros_ws/build/launcher/catkin_generated/installspace/launcherConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/launcher" TYPE FILE FILES "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/launcher/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/launcher" TYPE FILE FILES "/home/projet-long18/PL2022/celluleflexible/ros_ws/src/launcher/package.xml")
 endif()
 

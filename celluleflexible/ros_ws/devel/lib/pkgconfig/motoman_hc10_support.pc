@@ -1,4 +1,4 @@
-prefix=/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel
+prefix=/home/projet-long18/PL2022/celluleflexible/ros_ws/devel
 
 Name: motoman_hc10_support
 Description: Description of motoman_hc10_support

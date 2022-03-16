@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/log_manager.dir/src/LogManager.cpp.o"
-  "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/lib/commande_locale/log_manager.pdb"
-  "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/lib/commande_locale/log_manager"
+  "/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/lib/commande_locale/log_manager.pdb"
+  "/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/lib/commande_locale/log_manager"
 )
 
 # Per-language clean rules from dependency scanning.

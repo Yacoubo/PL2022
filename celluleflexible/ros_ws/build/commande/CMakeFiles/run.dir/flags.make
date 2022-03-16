@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=c++11
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"commande\"
 
-CXX_INCLUDES = -I/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/commande/include 
+CXX_INCLUDES = -I/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/projet-long18/PL2022/celluleflexible/ros_ws/src/commande/include 
 

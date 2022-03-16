@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/motoman_hc10_moveit_config_generate_messages_nodejs"
-  "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/share/gennodejs/ros/motoman_hc10_moveit_config/msg/ControlYakuzaMsg.js"
+  "/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/share/gennodejs/ros/motoman_hc10_moveit_config/msg/ControlYakuzaMsg.js"
 )
 
 # Per-language clean rules from dependency scanning.

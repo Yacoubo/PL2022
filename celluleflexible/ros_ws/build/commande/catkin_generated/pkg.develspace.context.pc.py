@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "roscpp;message_runtime".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "commande"
-PROJECT_SPACE_DIR = "/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel"
+PROJECT_SPACE_DIR = "/home/projet-long18/PL2022/celluleflexible/ros_ws/devel"
 PROJECT_VERSION = "4.0.0"

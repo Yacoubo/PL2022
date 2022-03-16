@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/DeplacerPieceMsg.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/DeplacerPieceMsg.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_ChoixMode.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/Msg_ChoixMode.h
 string
 -
 vector
@@ -38,25 +38,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/commande_locale/Msg_StopControl.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-std_msgs/Header.h
--
-
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/schneider_104/Msg_SensorState.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include/commande_locale/Msg_StopControl.h
 string
 -
 vector
@@ -74,7 +56,25 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/schneider_104/Retour_cellule_104.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include/schneider_104/Msg_SensorState.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+
+/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include/schneider_104/Retour_cellule_104.h
 ros/service_traits.h
 -
 schneider_104/Retour_cellule_104Request.h
@@ -82,7 +82,7 @@ schneider_104/Retour_cellule_104Request.h
 schneider_104/Retour_cellule_104Response.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/schneider_104/Retour_cellule_104Request.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include/schneider_104/Retour_cellule_104Request.h
 string
 -
 vector
@@ -98,7 +98,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/devel/include/schneider_104/Retour_cellule_104Response.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/devel/include/schneider_104/Retour_cellule_104Response.h
 string
 -
 vector
@@ -114,9 +114,9 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/schneider_104/src/app_cellule104.cpp
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/schneider_104/src/app_cellule104.cpp
 cellule_tp_104.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/schneider_104/src/cellule_tp_104.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/schneider_104/src/cellule_tp_104.h
 ros/ros.h
 -
 ros/console.h
@@ -128,9 +128,9 @@ stdlib.h
 string.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/schneider_104/src/cellule_tp_104.cpp
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/schneider_104/src/cellule_tp_104.cpp
 cellule_tp_104.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/schneider_104/src/cellule_tp_104.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/schneider_104/src/cellule_tp_104.h
 ros/ros.h
 -
 std_msgs/String.h
@@ -148,7 +148,7 @@ iostream
 math.h
 -
 
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/schneider_104/src/cellule_tp_104.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/schneider_104/src/cellule_tp_104.h
 ros/ros.h
 -
 std_msgs/String.h
@@ -160,7 +160,7 @@ schneider_104/Retour_cellule_104.h
 schneider_104/Msg_SensorState.h
 -
 commande_locale/Msg_StopControl.h
-/home/etudiant/TERcelluleflexible/celluleflexible/ros_ws/src/schneider_104/src/commande_locale/Msg_StopControl.h
+/home/projet-long18/PL2022/celluleflexible/ros_ws/src/schneider_104/src/commande_locale/Msg_StopControl.h
 commande_locale/Msg_ChoixMode.h
 -
 commande_locale/DeplacerPieceMsg.h
